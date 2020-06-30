@@ -212,7 +212,14 @@ function getLabString(lab, assignOnDate) {
 
 function getFileString(file) {
     if (!file) { return "n/a"; }
+    file = file + ".zip";
     return linkify(file, "labs/src/"+file);
+}
+
+function getFileSolutionString(file) {
+    if (!file) { return "n/a"; }
+    file = file + "_Sol.zip";
+    return linkify(file, "labs/sol/"+file);
 }
 
 
@@ -281,7 +288,7 @@ function printCalendar(opts) {
 
 function printLabs(opts) {
     document.write("<table>");
-    document.write("<thead><tr><th>Date</th><th>Lab</th><th>File(s)</th>");
+    document.write("<thead><tr><th>Date</th><th>Lab</th><th>File(s)</th><th>Solution</th>");
  
     // Number of items to print
     var numItems = calendar.length;
@@ -296,6 +303,8 @@ function printLabs(opts) {
         if (!calendar[i].lab) {
             // no lab on this date, so use the topic
             document.write("<td>" + getTopicString(calendar[i].topic) + "</td>");
+            document.write("<td>" + getFileString(calendar[i].file) + "</td>");
+            document.write("<td>" + getFileSolutionString(calendar[i].file) + "</td>");
             document.write("<td></td>");
         } else {
             document.write("<td>" + getLabString(calendar[i].lab, calendar[i].date) + "</td>");
