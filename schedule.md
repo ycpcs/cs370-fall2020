@@ -9,6 +9,6 @@ Please do the reading <i>before</i> you come to class.  Note that the reading in
 
 <script>
 	console.log("Generating calendar!");
-	autogenCalendar({ omitLabs: true, omitFinalExams: true });
+	autogenCalendar();
 	console.log("Done generating calendar!");
 </script>
