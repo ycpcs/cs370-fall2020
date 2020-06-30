@@ -1,0 +1,4 @@
+coursename: "CS 370"
+baseurl: "/cs370-fall2020"
+markdown: kramdown
+highlighter: rouge
