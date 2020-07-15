@@ -30,16 +30,12 @@ CS201 – Fundamentals of Computer Science II - with a grade of 2 or better
 Required Textbook
 -----------------
 
-Angel. [OpenGL: A Primer – 3rd Edition.](http://www.pearsonhighered.com/educator/product/OpenGL-A-Primer/9780321398116.page) Addison-Wesley, 2008.
+Shreiner, Sellers, Kessenich, and Licea-Kane. [OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 4.3 – 8th Edition.](http://www.pearsonhighered.com/educator/product/OpenGL-Programming-Guide-The-Official-Guide-to-Learning-OpenGL-Version-43/9780321773036.page) Addison-Wesley, 2013.
 
 Supplemental Resources
 ----------------------
 
-Shreiner, Sellers, Kessenich, and Licea-Kane. [OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 4.3 – 8th Edition.](http://www.pearsonhighered.com/educator/product/OpenGL-Programming-Guide-The-Official-Guide-to-Learning-OpenGL-Version-43/9780321773036.page) Addison-Wesley, 2013.
-
-Rost and Licea-Kane. [OpenGL Shading Language – 3rd Edition.](http://www.pearsonhighered.com/educator/product/OpenGL-Shading-Language/9780321637635.page) Addison-Wesley, 2010.
-
-Foley, van Dam, Feiner, and Hughes. [Computer Graphics: Principles and Practice in C – 2nd Edition.](http://www.pearsonhighered.com/educator/product/Computer-Graphics-Principles-and-Practice-in-C/9780201848403.page) Addison-Wesley, 1996.
+Hughes, van Dam, McGuire, Sklar, Foley, Feiner, and Akeley. [Computer Graphics: Principles and Practice in C – 3rd Edition.](https://www.pearson.com/us/higher-education/program/Hughes-Computer-Graphics-Principles-and-Practice-3rd-Edition/PGM29906.html) Addison-Wesley, 2014.
 
 Course Structure and Expectations
 ---------------------------------
