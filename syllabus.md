@@ -30,7 +30,7 @@ CS201 – Fundamentals of Computer Science II - with a grade of 2 or better
 Required Textbook
 -----------------
 
-Shreiner, Sellers, Kessenich, and Licea-Kane. [OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 4.3 – 8th Edition.](http://www.pearsonhighered.com/educator/product/OpenGL-Programming-Guide-The-Official-Guide-to-Learning-OpenGL-Version-43/9780321773036.page) Addison-Wesley, 2013.
+Shreiner, Sellers, Kessenich, and Licea-Kane. [OpenGL Programming Guide: The Official Guide to Learning OpenGL, Version 4.3 – 8th Edition.](https://www.pearson.com/us/higher-education/product/Shreiner-Open-GL-Programming-Guide-The-Official-Guide-to-Learning-Open-GL-Version-4-3-8th-Edition/9780321773036.html) Addison-Wesley, 2013.
 
 Supplemental Resources
 ----------------------
