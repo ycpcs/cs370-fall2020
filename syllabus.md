@@ -127,7 +127,7 @@ The final project will demonstrate all the concepts learned throughout the cours
 
 Assignments and labs will be posted as zip files on the [course web page](index.html).
 
-Assignments will be submitted using the server [<https://cs.ycp.edu/marmoset>](https://cs.ycp.edu/marmoset). You will receive an email containing the username and password you should use for this server.
+Assignments will be submitted using the [Marmoset](https://cs.ycp.edu/marmoset) server. You will receive an email containing the username and password you should use for this server.
 
 ### Academic Integrity
 
