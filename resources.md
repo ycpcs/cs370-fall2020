@@ -12,7 +12,7 @@ This page contains links to useful resources.
 -   [GLEW](http://glew.sourceforge.net/) This is the OpenGL Extension Wrangler Library package we will be using to ensure all core functionality is available.
 
 
-## Windows 10
+# Windows 10
 
 ### Visual Studio 2019
 
@@ -57,7 +57,7 @@ Download and install [Visual Studio 2019](https://visualstudio.microsoft.com) - 
     - C:\\Windows\\System32
  
 
-## Mac OSX (Catalina)
+# Mac OSX (Catalina)
 
 ### XCode
 
@@ -65,7 +65,9 @@ Download and install [Visual Studio 2019](https://visualstudio.microsoft.com) - 
 
 2. In the Terminal, install the command line tools using
 
-    - xcode-select --install
+	```cpp
+	$ sudo xcode-select --install
+	```
     
 ### CLion
 
@@ -81,15 +83,19 @@ Install the [homebrew](https://brew.sh) package manager for Mac.
 
 Install GLFW via **homebrew**
 
-    - brew install glfw
+	```cpp
+	$ brew install glfw
+	```
     
 ### GLEW
 
 Install GLEW via **homebrew**
 
-    - brew install glew
+	```cpp
+	$ brew install glew
+	```
 
 
-## Linux
+# Linux
 
 Use the appropriate package manager, e.g. **yum** or **apt**. Contact me for further assistance.
