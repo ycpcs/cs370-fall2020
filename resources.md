@@ -83,17 +83,17 @@ Install the [homebrew](https://brew.sh) package manager for Mac.
 
 Install GLFW via **homebrew**
 
-	```cpp
-	$ brew install glfw
-	```
+```cpp
+$ brew install glfw
+```
     
 ### GLEW
 
 Install GLEW via **homebrew**
 
-	```cpp
-	$ brew install glew
-	```
+```cpp
+$ brew install glew
+```
 
 
 # Linux
