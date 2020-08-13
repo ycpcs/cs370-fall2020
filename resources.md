@@ -11,7 +11,7 @@ This page contains links to useful resources.
 -   [GLFW](https://www.glfw.org) This is the cross-platform window management library for OpenGL we will be using.
 -   [GLEW](http://glew.sourceforge.net/) This is the OpenGL Extension Wrangler Library package we will be using to ensure all core functionality is available.
 
-
+<!--
 # Windows 10
 
 ### Visual Studio 2019
@@ -99,3 +99,4 @@ $ brew install glew
 # Linux
 
 Use the appropriate package manager, e.g. **yum** or **apt**. Contact me for further assistance.
+-->
