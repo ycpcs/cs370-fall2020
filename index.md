@@ -11,7 +11,7 @@ Welcome to the website for CS 370, Computer Graphics Programming I, at York Coll
 
 ## Links
 
-* [Schedule/Readings](schedule.html)
+* [Schedule/Readings](labs/schedule.html)
 * [Labs](labs/index.html)
 * [Assignments](assign/index.html)
 * [Resources](resources.html)
