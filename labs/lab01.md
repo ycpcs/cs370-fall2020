@@ -162,7 +162,15 @@ to ensure that the pipeline has completed rendering all the geometry prior to sw
 
 Finally we are ready to draw our objects.
 
-First we will bind the vertex array for the object we are going to draw again using 
+First we will select the shader program we wish to use to render the object using
+
+```cpp
+void glUseProgram(GLuint program);
+```
+
+where *program* is a reference to our desired shader program.
+
+Next, we bind the vertex array for the object we are going to draw again using 
 
 ```cpp
 void glBindVertexArray(GLuint array);
@@ -170,7 +178,31 @@ void glBindVertexArray(GLuint array);
  
 where *array* is the reference to our object's vertex array.
 
-Then we can directly draw using the data in the corresponding vertex buffer using
+Then we will associate our vertex array with the corresponding shader variable (discussed in a subsequent lecture) using 
+
+```cpp
+void glVertexAttribPointer(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const GLvoid *pointer);
+```
+
+where *index* is a reference to the corresponding shader variable location, *size* is the number of coordinates in the vertex, *type* is the datatype for the coordinates, *normalized* indicates whether to normalize the coordinates in the range [-1,1], *stride* is the offset between consecutive vertices in the buffer, and finally \**pointer* is the offset of the starting location for the data (despite its awkward signature).
+
+Then we will enable these attributes using
+
+```cpp
+void glEnableVertexAttribArray(GLuint index);
+```
+
+where *index* is the reference to the corresponding shader variable location.
+
+Lastly, we will then bind our vertex buffer again using
+
+```cpp
+void glBindBuffer(GLenum target, GLuint buffer);
+```
+ 
+where *target* will be **GL\_ARRAY\_BUFFER** since this is a vertex array buffer, and *buffer* will be a reference to our buffer object.
+
+After all the buffers are set up, we finally can directly draw using the data buffer using
 
 ```cpp
 void glDrawArrays(GLenum mode, GLint first, GLsizei count);
@@ -186,11 +218,27 @@ where *mode* is the type of primitives we want to use with the vertices (e.g. **
 
 - Add code to **display()** to ensure all the rendering has completed
 
+- Add code to **render\_scene()** to select the *program* shader program
+
 - Add code to **render\_scene()** to bind the *Triangles* vertex array from the *VAOs* name array created earlier
 
-- Add code to **render\_scene()** to draw the geometry using **GL\_TRIANGLES** starting at vertex 0 and using *numVertices* vertices.
+- Add code to **render\_scene()** to associate the shader variable location stored in *vPos*, with *posCoords* coordinates per vertex (which is set to 2), that are of type **GL\_FLOAT**, without normalization, no stride (since the data is tightly packed), and no offset using
 
-**Note:** For this lab, we are not specifying the *color* of our object in the application, but rather setting it directly in the fragment shader.
+```cpp
+    glVertexAttribPointer(vPos, posCoords, GL_FLOAT, GL_FALSE, 0, NULL);
+```
+
+- Add code to **render\_scene()** to enable the attributes using the shader location *vPos* using
+
+```cpp
+    glEnableVertexAttribArray(vPos);
+```
+
+- Add code to **render\_scene()** to bind the *PosBuffer* element from the *Buffers* array
+
+- Add code to **render\_scene()** to draw the geometry using **GL\_TRIANGLES** starting at vertex 0 and using *numVertices* vertices
+
+**Note:** For this lab, we are not specifying the *color* of our object in the application, but rather setting it directly in the fragment shader
 
 ## Compiling and running the program
 
