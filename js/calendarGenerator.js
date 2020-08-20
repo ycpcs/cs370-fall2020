@@ -118,7 +118,7 @@ function linkify(title, link) {
     if (link === "") {
         str = title;
     } else {
-        str = "<a href=\"" + link + "\">" + title + "</a>";
+        str = "<a href=\lab\\" + link + "\">" + title + "</a>";
     }
     return title.match("^\\*\\*") ? ("<strong>" + str.substring(2) + "</strong>") : str;
 }
@@ -213,13 +213,13 @@ function getLabString(lab, assignOnDate) {
 function getFileString(file) {
     if (!file) { return "n/a"; }
     file = file + ".zip";
-    return linkify(file, "labs/src/"+file);
+    return linkify(file, "src/"+file);
 }
 
 function getFileSolutionString(file) {
     if (!file) { return "n/a"; }
     file = file + "_Sol.zip";
-    return linkify(file, "labs/sol/"+file);
+    return linkify(file, "sol/"+file);
 }
 
 

@@ -26,8 +26,8 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 At the beginning of the **main** function you should see:
 
 ```cpp
-	// Create OpenGL window
-	GLFWwindow* window = CreateWindow("Hello OpenGL!");
+    // Create OpenGL window
+    GLFWwindow* window = CreateWindow("Hello OpenGL!");
     if (!window) {
         fprintf(stderr, "ERROR: could not open window with GLFW3\n");
         glfwTerminate();
