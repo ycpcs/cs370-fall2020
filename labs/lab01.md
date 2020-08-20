@@ -150,7 +150,7 @@ For now, we will simply use the **display()** function to clear the framebuffer 
     glClear(GL_COLOR_BUFFER_BIT);
 ```
 
-to give us a blank slate to draw on. **Note:** A *clear* (background) *color* can be set using **glClearColor()** in **main()** before starting the graphics loop. Then we will call the **render\_scene()** function which will draw all of our objects in *world coordinates*. And finally we will call
+to give us a blank slate to draw on. **Note:** A *background* (or clear) *color* can be set using **glClearColor()** in **main()** before starting the graphics loop. Then we will call the **render\_scene()** function which will draw all of our objects in *world coordinates*. And finally we will call
 
 ```cpp
     glFlush();
@@ -162,8 +162,6 @@ to ensure that the pipeline has completed rendering all the geometry prior to sw
 
 Finally we are ready to draw our objects.
 
-**Binding Vertex Array**
-
 First we will bind the vertex array for the object we are going to draw again using 
 
 ```cpp
@@ -171,8 +169,6 @@ void glBindVertexArray(GLuint array);
 ```
  
 where *array* is the reference to our object's vertex array.
-
-**Drawing**
 
 Then we can directly draw using the data in the corresponding vertex buffer using
 
