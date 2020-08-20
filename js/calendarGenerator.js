@@ -118,7 +118,8 @@ function linkify(title, link) {
     if (link === "") {
         str = title;
     } else {
-        str = "<a href=\labs\\" + link + "\">" + title + "</a>";
+    	link = "labs\\" + link
+        str = "<a href=\"" + link + "\">" + title + "</a>";
     }
     return title.match("^\\*\\*") ? ("<strong>" + str.substring(2) + "</strong>") : str;
 }
