@@ -62,7 +62,7 @@ You should be able to build and run the program by clicking the small green arro
 
 At this point you should see a blank window with the title **Hello OpenGL!** and output in the CLion console window listing the supported OpenGL version.
 
-> <img src="images/lab00/Blank.png" alt="Lab00 Screen" height="500"/>
+> <img src="images/lab00/Blank.png" alt="Hello OpenGL Window" height="500"/>
 
 > <img src="images/lab00/Console.png" alt="Lab00 Console" width="500"/>
 
@@ -70,3 +70,4 @@ To quit the program simply close the window.
 
 Congratulations, if this program runs you are all set to start creating your own 3D graphics! Let the fun begin!
 
+Next we will learn how to create objects using basic geometry.
