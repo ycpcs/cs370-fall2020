@@ -3,7 +3,7 @@ layout: default
 title: "Lab 2: Indexed Geometry and Colors"
 ---
 
-In the last lab we built some simple geometry and rendered it using a vertex buffer. However, while the square only required *four* unique vertices to define the shape, we needed to store *six* vertices in the buffer to create the two triangles, i.e. we *duplicated* two vertices resulting in using *50\%* more buffer memory than necessary. As our object geometries become more complicated both in terms of the number of vertices and as we expand the data associated with each vertex, the extra memory requirements can become a substantial issue. Thus, an alternative way of defining our geometry is to only store *unique* vertices in the vertex buffer (without concern to ordering), and then simply specify a set of *indices* that create the primitives. In this lab, we will also add colors to our vertices within the application that will then be passed with the coordinate data to the shaders.
+In the last lab we built some simple geometry and rendered it using a vertex buffer. However, while the square only required *four* unique vertices to define the shape, we needed to store *six* vertices in the buffer to create the two triangles, i.e. we *duplicated* two vertices resulting in using *50%* more buffer memory than necessary. As our object geometries become more complicated both in terms of the number of vertices and as we expand the data associated with each vertex, the extra memory requirements can become a substantial issue. Thus, an alternative way of defining our geometry is to only store *unique* vertices in the vertex buffer (without concern to ordering), and then simply specify a set of *indices* that create the primitives. In this lab, we will also add colors to our vertices within the application that will then be passed with the coordinate data to the shaders.
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
 ## Defining Colors
 
-In OpenGL, colors are typically represented by four components in the range [0.0,1.0] - (r, g, b, a) - where *r*, *g*, and *b* are the red, green, and blue channels respectively, and *a* is the alpha channel which we use later when we discuss alpha blending, i.e. transparency. While you may be familiar with the color channels being integers in the range [0,255] (for 24/32-bit colors), OpenGL provides a more flexible representation as a floating point number in the range [0.0, 1.0] which works with *any* color depth representation.
+In OpenGL, colors are typically represented by four components in the range [0.0,1.0] - (r, g, b, a) - where *r*, *g*, and *b* are the red, green, and blue channels respectively, and *a* is the alpha channel which we will use later when we discuss alpha blending, i.e. transparency. While you may be familiar with the color channels being integers in the range [0,255] (for 24/32-bit colors), OpenGL provides a more flexible representation as a floating point number in the range [0.0, 1.0] which works with *any* color depth representation.
 
 The interesting part about OpenGL colors is they are defined at each *vertex*. Thus, if vertices in the object have different colors, OpenGL's default behavior is to perform *bilinear interpolation* to create a shaded *gradient* between the vertices.
 
@@ -103,4 +103,4 @@ To quit the program simply close the window.
 
 Congratulations, you have now rendered slightly more complex geometry.
 
-Next we will learn how to create objects using *indexed* geometry to avoid repeating duplicate vertices to minimize the size of the vertex buffers.
+Next we will learn how to manipulate our objects using *transformations*.
