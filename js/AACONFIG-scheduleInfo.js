@@ -11,6 +11,11 @@ courseInfo.classPeriods = [
 		reading: "Ch. 1",
 		file: "CS370_Lab01"
 	},
+	{
+		topic: new Topic("Lab 2: Indexed Geometry and Colors", "lab02.html"),
+		reading: "Ch. 3",
+		file: "CS370_Lab02"
+	},
 ];
 
 // The following is for the college-scheduled final exam.

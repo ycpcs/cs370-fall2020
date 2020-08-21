@@ -222,6 +222,8 @@ where *mode* is the type of primitives we want to use with the vertices (e.g. **
 
 - Add code to **render\_scene()** to bind the *Triangles* vertex array from the *VAOs* name array created earlier
 
+- Add code to **render\_scene()** to bind the *PosBuffer* element from the *Buffers* array
+
 - Add code to **render\_scene()** to associate the shader variable location stored in *vPos*, with *posCoords* coordinates per vertex (which is set to 2), that are of type **GL\_FLOAT**, without normalization, no stride (since the data is tightly packed), and no offset using
 
 ```cpp
@@ -233,8 +235,6 @@ where *mode* is the type of primitives we want to use with the vertices (e.g. **
 ```cpp
     glEnableVertexAttribArray(vPos);
 ```
-
-- Add code to **render\_scene()** to bind the *PosBuffer* element from the *Buffers* array
 
 - Add code to **render\_scene()** to draw the geometry using **GL\_TRIANGLES** starting at vertex 0 and using *numVertices* vertices
 
