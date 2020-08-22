@@ -9,7 +9,7 @@ We will use *matrices* from linear algebra to define several common *affine* tra
 
 ## Getting Started
 
-Create a directory on your **H:** drive named **CS370** (or anywhere else you choose). Navigate into this new directory and create a subdirectory named **labs**.
+Navigate into the **CS370\labs** directory on your **H:** drive.
 
 Download [CS370\_Lab03.zip](CS370_Lab03.zip), saving it into the **labs** directory.
 
@@ -233,4 +233,4 @@ To quit the program simply close the window.
 
 Congratulations, you have now used transformations to manipulate the size, orientation, and location of objects.
 
-Next we will discuss the basics of GLSL to better understand how the data passed from our application is processed to generate the rendered scene.
+Next we will discuss how to incorporate keyboard and mouse input along with create animations using GLFW callbacks.

@@ -9,7 +9,7 @@ Regardless of the API, all graphics hardware works by taking a set of (3D) *vert
 
 ## Getting Started
 
-Create a directory on your **H:** drive named **CS370** (or anywhere else you choose). Navigate into this new directory and create a subdirectory named **labs**.
+Navigate into the **CS370\labs** directory on your **H:** drive.
 
 Download [CS370\_Lab01.zip](CS370_Lab01.zip), saving it into the **labs** directory.
 

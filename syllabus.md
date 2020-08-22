@@ -77,9 +77,9 @@ Grades are assigned on a 100-point scale:
 
 Your overall grade for the course will be determined as follows:
 
--   Homework assignments: 25%
--   Midterm exams: 50%
--   Final project: 25%
+-   Homework assignments: 30%
+-   Midterm exams: 30%
+-   Final project: 40%
 
 ### Course website
 

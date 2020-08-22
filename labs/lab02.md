@@ -7,7 +7,7 @@ In the last lab we built some simple geometry and rendered it using a vertex buf
 
 ## Getting Started
 
-Create a directory on your **H:** drive named **CS370** (or anywhere else you choose). Navigate into this new directory and create a subdirectory named **labs**.
+Navigate into the **CS370\labs** directory on your **H:** drive.
 
 Download [CS370\_Lab02.zip](CS370_Lab02.zip), saving it into the **labs** directory.
 
