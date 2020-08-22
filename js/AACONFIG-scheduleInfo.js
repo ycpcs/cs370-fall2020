@@ -21,6 +21,11 @@ courseInfo.classPeriods = [
 		reading: "Ch. 5",
 		file: "CS370_Lab03"
 	},
+	{
+		topic: new Topic("Lab 4: User Interaction and Animation", "lab04.html"),
+		reading: "",
+		file: "CS370_Lab04"
+	},
 ];
 
 // The following is for the college-scheduled final exam.
