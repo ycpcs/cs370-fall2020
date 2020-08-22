@@ -23,11 +23,11 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
 The fundamental concepts of linear algebra consist of *vectors* and *matrices*. We can think of a vector as a *column* of values (known as *components* of the vector). Hence a point in 2D space (x,y) would be represented by the vector
 
-> <img src="images/lab03/Vector.png" alt="Vector" height="200"/>
+> <img src="images/lab03/Vector.png" alt="Vector" height="50"/>
 
 A *matrix* can be conceptualized as a *table* of values. Hence a 2x2 matrix (known as the *dimension* or *size* of the matrix where the first number represents the number of *rows* while the second number represents the number of *columns*) would be represented as
 
-> <img src="images/lab03/Matrix.png" alt="Matrix" height="200"/>
+> <img src="images/lab03/Matrix.png" alt="Matrix" height="50"/>
 
 The *elements* of a matrix are typically indexed by row and column as shown above. Note that a vector is simply a special case of a matrix with a single column, i.e. an nx1 matrix. While technically a 1xn matrix, i.e. a single row, is often also referred to as a vector, we will reserve the term vector for a single column. Furthermore, matrices with the same number of rows as columns is known as a *square* matrix.
 
@@ -39,23 +39,23 @@ Vectors are typically represented programmatically as a 1D array while matrices 
 
 Addition is done componentwise for vectors/matricies that have the *same* dimensions. Hence adding two vectors
 
-> <img src="images/lab03/UV.png" alt="U and V Vectors" height="200"/>
+> <img src="images/lab03/UV.png" alt="U and V Vectors" height="50"/>
 
 would give
 
-> <img src="images/lab03/VecAdd.png" alt="Vector Addition" height="200"/>
+> <img src="images/lab03/VecAdd.png" alt="Vector Addition" height="50"/>
 
 Similarly, adding matrices
 
-> <img src="images/lab03/RS.png" alt="R and S Matrices" height="200"/>
+> <img src="images/lab03/RS.png" alt="R and S Matrices" height="50"/>
 
 would give
 
-> <img src="images/lab03/MatAdd.png" alt="Matrix Addition" height="200"/>
+> <img src="images/lab03/MatAdd.png" alt="Matrix Addition" height="50"/>
 
 However the computation
 
-> <img src="images/lab03/MixAdd.png" alt="Mismatched Matrix Addition" height="200"/>
+> <img src="images/lab03/MixAdd.png" alt="Mismatched Matrix Addition" height="50"/>
 
 would be undefined since the two operands are of different sizes.
 
@@ -63,19 +63,19 @@ would be undefined since the two operands are of different sizes.
 
 Multiplication is done for vectors/matrices that have matching *inner* dimensions, i.e. the number of *columns* of the first operand must be the same as the number of *rows* of the second operand. The resulting matrix will have a size corresponding to the *outer* dimensions, i.e. will have the same number of *rows* as the first operand and the same number of *columns* of the second operand. The elements of the resulting matrix are computed using the *sum-of-products* rule as shown below for a matrix multiplied by a vector (note a 2x2 matrix multiplied by a 2x1 vector results in a 2x1 vector, i.e. a vertex is *transformed* to a new vertex)
 
-> <img src="images/lab03/MatVecMult.png" alt="Matrix-Vector Multiplication" height="200"/>
+> <img src="images/lab03/MatVecMult.png" alt="Matrix-Vector Multiplication" height="50"/>
 
 and a matrix multiplied by a matrix
 
-> <img src="images/lab03/MatMatMult.png" alt="Matrix-Matrix Multiplication" height="200"/>
+> <img src="images/lab03/MatMatMult.png" alt="Matrix-Matrix Multiplication" height="50"/>
 
 In general, for two matrices (including vectors) **R** ( *m* x *k* ) and **S** ( *k* x *n* ) the elements of the resulting product matrix **M** (of dimension *m* x *n* ) can be computed as
 
-> <img src="images/lab03/ProdElem.png" alt="Matrix Product Element" height="200"/>
+> <img src="images/lab03/ProdElem.png" alt="Matrix Product Element" height="25"/>
 
 **Note:** Unlike regular arithmetic multiplication, matrix multiplication is **not** commutative, i.e. *order is important*. Hence if we multiply the same two matrices as above in the opposite order the result is
 
-> <img src="images/lab03/MatMatMult2.png" alt="Noncommutative Matrix Product" height="200"/>
+> <img src="images/lab03/MatMatMult2.png" alt="Noncommutative Matrix Product" height="50"/>
 
 which in general will be different than the first product (there are certain special cases where they will be the same but we will assume that *order matters*). This property will become extremely important when we begin concatenating transformation matrices.
 
@@ -100,11 +100,11 @@ We will not typically initialize matrices directly, but rather create the matric
 
 The simplest transformations to apply are *scaling* transformations which simply multiply each component of a vector by a given amount known as the *scale factor*. If the scale factor is the same for all components, then the transformation is called a *uniform* or *isotropic* scaling (i.e. identical distortion in all directions), otherwise it is a *nonuniform* or *anisotropic* scaling (different distortions for different directions). If the scale factors are negative, the image is also *mirrored* about that axis. Mathematically, we can represent a 2D scaling with a *scaling matrix* transformation given by
 
-> <img src="images/lab03/ScaleMat.png" alt="Scaling Matrix" height="200"/>
+> <img src="images/lab03/ScaleMat.png" alt="Scaling Matrix" height="50"/>
 
 where *sx* is the scale factor in the x direction and *sy* is the scale factor in the y direction. Applying this transformation to a vector *u* gives
 
-> <img src="images/lab03/ScaleVec.png" alt="Scaled Vector" height="200"/>
+> <img src="images/lab03/ScaleVec.png" alt="Scaled Vector" height="50"/>
 
 which we can clearly see scales each component of the vector by the corresponding scale factor.
 
@@ -131,11 +131,11 @@ where *x*, *y*, and *z* (or alternatively the corresponding components of a **ve
 
 The next common type of transformation we wish to apply is a *rotation* about a given axis (which in 2D will simply be the *z-axis* which is perpendicular to the screen). Rotation angles are defined *counterclockwise* with respect to the origin (i.e. follow the *right-hand rule*). The rotation matrix for an angle θ is given by
 
-> <img src="images/lab03/RotMat.png" alt="Rotation Matrix" height="200"/>
+> <img src="images/lab03/RotMat.png" alt="Rotation Matrix" height="50"/>
 
 Applying this transformation to a vector **u** gives
 
-> <img src="images/lab03/RotVec.png" alt="Rotated Vector" height="200"/>
+> <img src="images/lab03/RotVec.png" alt="Rotated Vector" height="50"/>
 
 which is not so obvious that the correct rotation is obtained.
 
@@ -164,17 +164,17 @@ where *angle* is the angle of (counterclockwise) rotation *in degrees* and *x,y,
 
 Mathematically, translation is achieved by simply adding a fixed offset to each component of a vector. Hence we can write this operation using vector notation (for a 2D vector) as
 
-> <img src="images/lab03/TransVec.png" alt="Additive Translation Vector" height="200"/>
+> <img src="images/lab03/TransVec.png" alt="Additive Translation Vector" height="50"/>
 
 where *dx* is the offset in the *x* direction and *dy* is the offset in the *y* direction.
 
 However, since the graphics pipeline is only designed to perform matrix *multiplication*, translation would either need to be done within the application or additional hardware would be needed on the graphics card to perform translations. Recall that matrix multiplication is a *sum-of-products* and hence we can perform vector addition through a matrix multiplication using *homogeneous coordinates*. We simply extend each vector by an additional component which is set to the value 1, and then the transformation matrices that require addition use values in the *last column* that multiply this extended component. In OpenGL, *all* vectors and matrices are represented internally in homogeneous coordinates so from the application programmer's standpoint it is transparent. Thus in 2D (which means 3D homogeneous coordinates), the translation transformation matrix is given by
 
-> <img src="images/lab03/TransMat.png" alt="Translation Matrix" height="200"/>
+> <img src="images/lab03/TransMat.png" alt="Translation Matrix" height="75"/>
 
 which when multiplied by a 2D vector (which is 3D in homogeneous coordinates), gives
 
-> <img src="images/lab03/TransMult.png" alt="Multiplicative Translated Vector" height="200"/>
+> <img src="images/lab03/TransMult.png" alt="Multiplicative Translated Vector" height="75"/>
 
 that is clearly identical to the vector addition above in *homogeneous coordinates*.
 
@@ -205,8 +205,7 @@ where *x*, *y*, and *z* (or alternatively the corresponding components of a **ve
 
 Often times we will wish to have similar objects with different scalings and rotations that are positioned throughout the scene. One very convienient way to accomplish this effect is to create a *template* object that is centered at the origin with "unit" size. Then for each instance of the object we wish to create, we simply scale, rotate, and translate the object into its proper size, orientation, and location in the scene. The proper mathematical order for this sequence is
 
-> <img src="images/lab03/InstMat.png" alt="Instance Transformation" height="200"/>
-> ![image](images/lab05/InstMat.png)
+> <img src="images/lab03/InstMat.png" alt="Instance Transformation" height="25"/>
 
 The library allows for the \* operator to be used with **mat4** objects to perform matrix multiplication, thus if we have created scaling, rotation, and translation matrices named *sc*, *rot*, and *trans* using the functions discussed above, we could create an instance transformation as
 

@@ -97,7 +97,7 @@ where *window* is the reference to the current window and *mouse\_button\_callba
 
 The mouse motion callback is used to process mouse movement events to retrieve the current cursor position in *screen coordinates*. Screen coordinates are measured in *pixels* with (0,0) being the upper left-hand corner of the window with the *x* axis increasing to the right and the *y* axis increasing downward. While there is an obvious relationship between screen coordinates and world coordinates in 2D, in 3D that relationship becomes ambiguous which can make *selecting* objects in the scene somewhat challenging.
 
-> <img src="images/lab04/ScrenCoords.png" alt="Screen Coordinates" height="500"/>
+> <img src="images/lab04/ScreenCoords.png" alt="Screen Coordinates" height="500"/>
 
 The mouse motion callback has the signature
 
