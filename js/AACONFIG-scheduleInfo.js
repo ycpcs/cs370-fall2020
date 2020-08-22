@@ -16,6 +16,11 @@ courseInfo.classPeriods = [
 		reading: "Ch. 3",
 		file: "CS370_Lab02"
 	},
+	{
+		topic: new Topic("Lab 3: Linear Algebra and Transformations", "lab03.html"),
+		reading: "Ch. 5",
+		file: "CS370_Lab03"
+	},
 ];
 
 // The following is for the college-scheduled final exam.
