@@ -112,10 +112,10 @@ Rather than have to create the transformation matrix manually, the library provi
 
 ```cpp
 mat4 scale(float x, float y, float z);
-mat4 scale(vec4 scaleFactors);
+mat4 scale(vec3 scaleFactors);
 ```
 
-where *x*, *y*, and *z* (or alternatively the corresponding components of a **vec4**) are the scale factors in the *x*, *y*, and *z* dimensions respectively. For 2D vertices, simply set the *z* factor to 1.
+where *x*, *y*, and *z* (or alternatively the corresponding components of a **vec3**) are the scale factors in the *x*, *y*, and *z* dimensions respectively. For 2D vertices, simply set the *z* factor to 1.
 
 *NOTE:* The scaling is applied *relative to the origin*, thus if the object is not centered about the origin, the scaling will also *translate* the center of the object by a corresponding amount.
 
