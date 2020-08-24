@@ -28,15 +28,15 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 	
 3. Given the following set of vertices that define a square
 
-> <img src="images/assign01/startSq.png" alt="Don Quixote Window" height="300"/>
+> <img src="images/assign01/startSq.png" alt="Don Quixote Window" height="100"/>
 
 -   Sketch a set of *intermediate* transformations to produce the following end result with proper size, orientation, and location. Give the final product of your particular transformation sequence using **T(dx,dy)** for a translation by *dx* and *dy*, **R(θ)** for a rotation (about the *z* axis) by angle θ, and **S(sx,sy)** for a scaling by *sx* and *sy*.
 
-> <img src="images/assign01/Diamond.png" alt="Diamond" height="300"/>
+> <img src="images/assign01/diamond.png" alt="Diamond" height="300"/>
 
 -   Sketch a set of *intermediate* transformations using only the *upper left* triangle vertices to produce the following end result with proper size, orientation, and location. Give the final product of your particular transformation sequence using **T(dx,dy)** for a translation by *dx* and *dy*, **R(θ)** for a rotation (about the *z* axis) by angle θ, and **S(sx,sy)** for a scaling by *sx* and *sy*.
 
-> <img src="images/assign01/Triangle.png" alt="Triangle" height="300"/>
+> <img src="images/assign01/triangle.png" alt="Triangle" height="300"/>
 	
 ## Programming assignment
 
