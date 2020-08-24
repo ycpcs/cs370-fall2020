@@ -11,7 +11,7 @@ title: Syllabus
 
 Instructor: <a href="http://faculty.ycp.edu/~dbabcock">David Babcock</a>, <dbabcock@ycp.edu>
 
-Office Hours: M 11am-12pm 1-2pm, T 11am-12pm, W 1:30-3pm, R 8:30-9:30am, F 9-10am, or by appointment
+Office Hours: M 1-3pm, T 11am-12pm, W 1:30-3pm, R 8:30-9:30am, F 9-10am, or by appointment
 
 Class times:
 
