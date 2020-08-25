@@ -38,6 +38,23 @@ Download and install [Visual Studio 2019](https://visualstudio.microsoft.com) - 
 
 2. Download and install [CLion](https://www.jetbrains.com/clion/) and accept the defaults during the installation process.
 
-## Linux
+## Linux - USE AT YOUR OWN RISK
 
-Use the appropriate package manager, e.g. **yum** or **apt**. Contact me for further assistance.
+### Debian based distros (e.g. Debian, Ubuntu, Mint)
+
+From the command line, install the g++ compiler and the glfw/glew libraries
+
+	```cpp
+	$ sudo apt-get install g++
+	$ sudo apt-get install libglfw3-dev
+	$ sudo apt-get install libglew-dev
+	```
+	
+### CLion
+
+1.  Create a [JetBrains](https://account.jetbrains.com/login) account with your YCP email to obtain a free license. 
+
+2. Download [CLion](https://www.jetbrains.com/clion/) and follow the [installation instructions](https://www.jetbrains.com/help/clion/installation-guide.html#standalone)  for Linux.
+
+3. Accept the defaults during the installation process.
+
