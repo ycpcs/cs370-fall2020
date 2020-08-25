@@ -45,9 +45,9 @@ Download and install [Visual Studio 2019](https://visualstudio.microsoft.com) - 
 From the command line, install the g++ compiler and the glfw/glew libraries
 
 ```cpp
-	$ sudo apt-get install g++
-	$ sudo apt-get install libglfw3-dev
-	$ sudo apt-get install libglew-dev
+$ sudo apt-get install g++
+$ sudo apt-get install libglfw3-dev
+$ sudo apt-get install libglew-dev
 ```
 	
 ### CLion
