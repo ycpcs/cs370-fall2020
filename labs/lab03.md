@@ -11,7 +11,7 @@ We will use *matrices* from linear algebra to define several common *affine* tra
 
 Navigate into the **CS370\labs** directory on your **H:** drive.
 
-Download [CS370\_Lab03.zip](CS370_Lab03.zip), saving it into the **labs** directory.
+Download [CS370\_Lab03.zip](src/CS370_Lab03.zip), saving it into the **labs** directory.
 
 Double-click on **CS370\_Lab03.zip** and extract the contents of the archive into a subdirectory called **CS370\_Lab03**
 

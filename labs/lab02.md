@@ -9,7 +9,7 @@ In the last lab we built some simple geometry and rendered it using a vertex buf
 
 Navigate into the **CS370\labs** directory on your **H:** drive.
 
-Download [CS370\_Lab02.zip](CS370_Lab02.zip), saving it into the **labs** directory.
+Download [CS370\_Lab02.zip](src/CS370_Lab02.zip), saving it into the **labs** directory.
 
 Double-click on **CS370\_Lab02.zip** and extract the contents of the archive into a subdirectory called **CS370\_Lab02**
 

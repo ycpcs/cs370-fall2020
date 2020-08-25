@@ -15,7 +15,7 @@ We will be using [CMake](https://cmake.org) to configure our build environment f
 
 Create a directory on your **H:** drive named **CS370** (or anywhere else you choose). Navigate into this new directory and create a subdirectory named **labs**.
 
-Download [CS370\_Lab00.zip](CS370_Lab00.zip), saving it into the **labs** directory.
+Download [CS370\_Lab00.zip](src/CS370_Lab00.zip), saving it into the **labs** directory.
 
 Double-click on **CS370\_Lab00.zip** and extract the contents of the archive into a subdirectory called **CS370\_Lab00**
 

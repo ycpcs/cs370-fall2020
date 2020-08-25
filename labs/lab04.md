@@ -13,7 +13,7 @@ Unfortunately, since we cannot have return values, nor can we add additional ref
 
 Navigate into the **CS370\labs** directory on your **H:** drive.
 
-Download [CS370\_Lab04.zip](CS370_Lab04.zip), saving it into the **labs** directory.
+Download [CS370\_Lab04.zip](src/CS370_Lab04.zip), saving it into the **labs** directory.
 
 Double-click on **CS370\_Lab04.zip** and extract the contents of the archive into a subdirectory called **CS370\_Lab04**
 

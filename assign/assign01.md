@@ -3,11 +3,11 @@ layout: default
 title: "Assignment 1: Don Quixote"
 ---
 
-**Written Questions Due: Thursday, Sept 12th by 12:30/2:00 PM** (in class)
+**Written Questions Due Thursday, Sept 10th by 12:30/2:00 PM** (in class)
 
-**Program Due: Thursday, Sept 12th by 11:59 PM** Late assignments will be penalized 20 points per day.
+**Program Due: Monday, Sept 14th by 11:59 PM** Late assignments will be penalized 20 points per day.
 
-##Getting Started
+## Getting Started
 
 Download [CS370\_Assign01.zip](src/CS370_Assign01.zip), saving it into the **assignment** directory.
 
