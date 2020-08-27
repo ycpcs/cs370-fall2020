@@ -26,6 +26,12 @@ courseInfo.classPeriods = [
 		reading: "",
 		file: "CS370_Lab04"
 	},
+	{
+		topic: new Topic("Lab 5: 3D Orthographic Projection", "lab05.html"),
+		reading: "Ch. 5",
+		file: "CS370_Lab05"
+	},
+	
 ];
 
 // The following is for the college-scheduled final exam.
