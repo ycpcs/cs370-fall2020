@@ -164,4 +164,4 @@ To quit the program simply close the window.
 
 Congratulations, you have now added user inputs and animation into your scenes.
 
-Next we will discuss how to create 3D objects using different projections and place a camera in the scene.
+Next we will discuss how to create 3D objects using a basic (orthographic) projection.
