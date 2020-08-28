@@ -88,8 +88,6 @@ Grading Criteria
 
 You should be able to build and run the program by clicking the small green arrow towards the right of the top toolbar.
 
-At this point you should see a spinning red hexagon that can be moved around the screen using the arrow keys and reverse its direction using the left mouse button.
-
 > <img src="images/assign01/DonQuixote.png" alt="Don Quixote Window" height="500"/>
 
 To quit the program simply close the window.
@@ -97,11 +95,12 @@ To quit the program simply close the window.
 Submitting to Marmoset
 ======================
 
-To submit your completed assignment, open a terminal window, navigate to the working directory and type:
+At the top right of the CLion window, expand the drop down menu to change the configuration to **MAKE\_ZIP** and click the green arrow
 
-    make submit
+> <img src="images/assign01/MakeZip.png" alt="Make Zip" height="100"/>
 
-Then enter your Marmoset id and password. You should see a confirmation that the file was submitted successfully.
+You may see a configuration dialog, simply click the **Run** button and **Continue Anyway** in the Change Configuration Settings popup dialog. This should generate a **solution.zip** file in the project root directory. Log into [Marmoset](https://cs.ycp.edu/marmoset/login) and manually upload the **solution.zip** file to the **assign01** submission.
+
 
 **You are responsible for making sure that your submission contains the correct file(s).**
 
