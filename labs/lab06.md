@@ -99,11 +99,11 @@ Now you should be able to see the objects rendered with a perspective projection
 
 Often times when we wish to move the camera through a scene, simply adjusting the (x,y,z) components of the *eye* vector (with a corresponding adjustment of *center*) in Cartesian coordinates produces awkward behaviors. Instead, especially in a third person view, it is more natural if the camera is moved in *spherical coordinates* which consist of an *azimuth* angle (rotation about the *y* axis), an *elevation* angle (rotation down from the *y* axis), and a *radius* (distance from the origin), see the diagram below
 
-> <img src="images/lab05/spherecoords.png" alt="Spherical Coordinates" height="200"/>
+> <img src="images/lab06/spherecoords.png" alt="Spherical Coordinates" height="200"/>
 
 With this coordinate system, the camera appears to move around a sphere such that it rotates *around* the scene (azimuth), "up/down" in the scene (elevation), and "towards/away from" the center of the scene (radius). However, since *lookat* strictly uses Cartesian coordinates (i.e. (x,y,z)) the conversion from spherical to Cartesian coordinates is given by
 
-> <img src="images/lab05/spheretoCard.png" alt="Spherical to Cartesian Equations" height="100"/>
+> <img src="images/lab06/spheretoCard.png" alt="Spherical to Cartesian Equations" height="100"/>
 
 I have included code in the lab to initialize *eye* in **main()** and update it in **key_callback()** to revolve the camera around the scene by adjusting the azimuth and elevation angles using WASD and zooming in/out by adjusting the radius using ZX, and then recomputing the *eye* vector. 
 
