@@ -31,6 +31,11 @@ courseInfo.classPeriods = [
 		reading: "Ch. 5",
 		file: "CS370_Lab05"
 	},
+	{
+		topic: new Topic("Lab 6: 3D Models, Perspective Projection, and Cameras", "lab06.html"),
+		reading: "Ch. 5",
+		file: "CS370_Lab06"
+	},
 	
 ];
 

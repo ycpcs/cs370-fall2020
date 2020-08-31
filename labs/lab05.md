@@ -144,6 +144,6 @@ At this point you should see a spinning cube with gradient colored faces.
 
 To quit the program simply close the window.
 
-Congratulations, you have now rendered your first 3D scene.
+Congratulations, you have now rendered your first 3D scene with an orthographic projection.
 
 Next we will discuss how to load models rather than build geometry manually, create a perspective projection, and place a camera in the scene.

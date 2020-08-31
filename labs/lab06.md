@@ -111,12 +111,12 @@ I have included code in the lab to initialize *eye* in **main()** and update it 
 
 You should be able to build and run the program by clicking the small green arrow towards the right of the top toolbar.
 
-At this point you should see a spinning cube with gradient colored faces.
+At this point you should see a red cube with a yellow sphere on top of it and be able to move the camera around the objects.
 
 > <img src="images/lab06/frustumScene.png" alt="Frustum Scene Window" height="500"/>
 
 To quit the program simply close the window.
 
-Congratulations, you have now rendered your first 3D scene.
+Congratulations, you have now created a perspective scene and added a camera.
 
-Next we will discuss how to load models rather than build geometry manually, create a perspective projection, and place a camera in the scene.
+Next we will discuss more about the programmable shaders and how they are used to render our geometry.
