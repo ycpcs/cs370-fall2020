@@ -52,9 +52,6 @@ courseInfo.classPeriods = [
 		file: ""
 	},
 	{
-		topic: new Topic("Exam Review", ""),
-	},
-	{
 		topic: new Topic("** Exam 1", "")
 	},
 	
