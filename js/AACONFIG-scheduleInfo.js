@@ -36,6 +36,27 @@ courseInfo.classPeriods = [
 		reading: "Ch. 5",
 		file: "CS370_Lab06"
 	},
+	{
+		topic: new Topic("Lab 7: Graphics Pipeline and Using Shaders", "lab07.html"),
+		reading: "Ch. 2",
+		file: "CS370_Lab07"
+	},
+	{
+		topic: new Topic("Lab 8: Writing Shaders", "lab08.html"),
+		reading: "Ch. 2",
+		file: "CS370_Lab08"
+	},
+	{
+		topic: new Topic("Exam Review", ""),
+		reading: "",
+		file: ""
+	},
+	{
+		topic: new Topic("Exam Review", ""),
+	},
+	{
+		topic: new Topic("** Exam 1", "")
+	},
 	
 ];
 
