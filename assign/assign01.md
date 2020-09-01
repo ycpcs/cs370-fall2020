@@ -3,9 +3,9 @@ layout: default
 title: "Assignment 1: Don Quixote"
 ---
 
-**Written Questions Due Thursday, Sept 10th by 12:30/2:00 PM** (in class)
+**Written Questions Due Thursday, Sept 10th by 12:30/2:00 PM** (in class) Submit a **graded** pdf to Canvas.
 
-**Program Due: Monday, Sept 14th by 11:59 PM** Late assignments will be penalized 20 points per day.
+**Program Due: Monday, Sept 14th by 11:59 PM** Late assignments will be penalized 20 points per day. Follow the instructions below to upload to [Marmoset](https://cs.ycp.edu/marmoset/login)
 
 ## Getting Started
 

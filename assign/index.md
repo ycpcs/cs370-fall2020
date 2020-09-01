@@ -3,7 +3,9 @@ layout: default
 title: "Assignments"
 ---
 
-This page links to programming assignments.
+This page links to assignments.
+
+All written portions should be submitted to Canvas. All programming portions should be uploaded to [Marmoset](https://cs.ycp.edu/marmoset/)
 
 > Assignment | File | Written Due | Program Due | Solutions |
 > ---------- | ---- | ----------- | ----------- | --------- |
