@@ -6,6 +6,7 @@ title: "Lab 7: Graphics Pipeline and Basic Shaders"
 All vertices passed into the graphics card are processed by a multi-stage *graphics pipeline*. The graphics pipeline is optimized to process *graphics* (as opposed to a more general purpose computing pipeline such as on the CPU) which provides a great deal of efficiency and program simplicity at the expense of a limited number of operations. As a graphics programmer, it will be your task to utilize the pipeline to do as much work as possible on the graphics card rather than on the CPU. The stages of this pipeline are shown in the figure below:
 
 > <img src="images/lab07/RenderingPipeline.png" alt="Rendering Pipeline" height="200"/>
+
 [https://www.khronos.org/opengl/wiki/Rendering\_Pipeline\_Overview](https://www.khronos.org/opengl/wiki/Rendering_Pipeline_Overview). **Note:** The stages shaded in blue are *programmable*, i.e. we can specify their behavior through shader code.
 
 The two stages we will be considering in this course are:
@@ -214,7 +215,7 @@ You should be able to build and run the program by clicking the small green arro
 
 At this point you should see a gradient cube with a solid sphere on top that can be adjusted with a spherical coordinate perspective camera.
 
-> <img src="images/lab06/shaderScene.png" alt="Shader Scene Window" height="500"/>
+> <img src="images/lab06/ShaderScene.png" alt="Shader Scene Window" height="500"/>
 
 To quit the program simply close the window.
 
