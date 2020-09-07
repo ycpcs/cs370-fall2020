@@ -25,13 +25,17 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
 	> Hint: In order to achieve this projection, we need to find a *transformation matrix* that takes the standard axes and converts them as follows:
 	>
-    > ![image](images/assign02/oblique1.png)
-    >
-    > Use the above axis values to find the *rows* of a (homogeneous) transformation matrix by considering the matrix-vector products
-    >
-    > ![image](images/assign02/oblique2.png)
+    > <img src="images/assign02/oblique1.png" alt="Oblique Axes" height="100"/>
 
-4.  Some of my research has been in the area of stereoscopic 3D images, which is now common in movies and TV. To create a stereoscopic 3D image, we simply render the scene from two different viewpoints (one to represent what the left eye would see and one to represent what the right eye would see). If the viewer is considered to be at the origin with an ocular spacing of Δ*x*, what are the appropriate **gluLookAt()** functions to produce a stereo image pair? Hint: We need to render the scene from two different camera locations (separated by *dx*). Consider two possible locations where these cameras can be pointed, i.e. the **at** vector, to produce a stereoscopic image.
+    >
+    > Use the above axis values to find the *rows* of a (homogeneous) transformation matrix by considering the matrix-vector products of the standard axes with the following generic projection matrix
+    >
+    > <img src="images/assign02/oblique2.png" alt="Generic Projection Matrix" height="500"/>
+
+2. Given the following scene and projections, determine the final size of the object in the rendered scene (**Note:** the *x*-axis is ignored.) **Hint:** Use similar triangles to relate the relative sizes of the objects to the relative distances from the camera.
+
+
+3.  Some of my research has been in the area of stereoscopic 3D images, which is now common in movies and TV. To create a stereoscopic 3D image, we simply render the scene from two different viewpoints (one to represent what the left eye would see and one to represent what the right eye would see). If the viewer is considered to be at the origin with an ocular spacing of Δ*x*, what are the appropriate **gluLookAt()** functions to produce a stereo image pair? Hint: We need to render the scene from two different camera locations (separated by *dx*). Consider two possible locations where these cameras can be pointed, i.e. the **at** vector, to produce a stereoscopic image.
 
 ## Programming assignment
 
@@ -50,13 +54,13 @@ Write a program that draws a 3D "train" scene using OpenGL. A sample executable 
 
 > Use the provided models for a cube, cylinder, torus, and cone to draw all the geometry. You will need to load the models from their respective files in **build\_geometry()**
 >
-> Use instance transformations to build up more complex objects, e.g. tracks, by repeatedly rendering the template models with different transformations.
+> Use instance transformations to build up more complex objects, e.g. tracks, by repeatedly rendering the template models with different transformations. Suggested symbolic constants are provided in **RollinTrain.h**. The constants are interrelated as much as possible so that objects that are referenced off each other can be adjusted with a single value. **Develop the scene incrementally!** **Note:** You may want to make additional functions to draw the different parts of the scene, e.g. tracks, train, blocks, etc.
 >
-> Use *global variables* to avoid *magic numbers* in the code, particularly for object geometries and colors. Even better is to create symbolic constants with **\#define** statements within the header file **train.h**. The constants should be interrelated as much as possible so that objects that are referenced off each other can be adjusted with a single value. This adds a tremendous amount of flexibility when creating the scene as it becomes *much* easier to modify entire objects at once rather than needing to recalculate multiple dependent values. (After all, you *are* developing this scene *iteratively* aren't you?)
+> An initial *orthographic* view from an *isometric* viewpoint, i.e. the camera positioned along a line going through (1,1,1) but far enough back to see the entire scene is provided. You will want to add spherical coordinate angles and adjust the camera parameters accordingly.
 >
-> An initial orthographic view from an *isometric* viewpoint, i.e. the camera positioned along a line going through (1,1,1) but far enough back to see the entire scene is provided. You will want to add spherical coordinate angles and adjust the camera parameters accordingly.
+> For the *perspective* projection, consider where the camera should be located and where it should be looking at. **Note:** The location of this camera should *move* with the train.
 >
-> You may want to consider having completely separate projection and camera setups for the different projection modes. A flag to toggle between the modes has been provided.
+> You'll probably want to have completely separate projection and camera setups for the different projection modes. A flag to toggle between the modes has been provided.
 
 ## Grading Criteria
 
