@@ -25,17 +25,17 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
 	> Hint: In order to achieve this projection, we need to find a *transformation matrix* that takes the standard axes and converts them as follows:
 	>
-    > <img src="images/assign02/oblique1.png" alt="Oblique Axes" height="100"/>
+    > <img src="images/assign02/oblique1.png" alt="Oblique Axes" height="50"/>
 
     >
     > Use the above axis values to find the *rows* of a (homogeneous) transformation matrix by considering the matrix-vector products of the standard axes with the following generic projection matrix
     >
-    > <img src="images/assign02/oblique2.png" alt="Generic Projection Matrix" height="500"/>
+    > <img src="images/assign02/oblique2.png" alt="Generic Projection Matrix" height="100"/>
 
 2. Given the following scene and projections, determine the final size of the object in the rendered scene (**Note:** the *x*-axis is ignored.) **Hint:** Use similar triangles to relate the relative sizes of the objects to the relative distances from the camera.
 
 
-3.  Some of my research has been in the area of stereoscopic 3D images, which is now common in movies and TV. To create a stereoscopic 3D image, we simply render the scene from two different viewpoints (one to represent what the left eye would see and one to represent what the right eye would see). If the viewer is considered to be at the origin with an ocular spacing of Δ*x*, what are the appropriate **gluLookAt()** functions to produce a stereo image pair? Hint: We need to render the scene from two different camera locations (separated by *dx*). Consider two possible locations where these cameras can be pointed, i.e. the **at** vector, to produce a stereoscopic image.
+3.  Some of my research has been in the area of stereoscopic 3D images, which is now used extensively for VR. To create a stereoscopic 3D image, we simply render the scene from two different viewpoints (one to represent what the left eye would see and one to represent what the right eye would see) and then display the corresponding image to each eye using the VR headset. If the viewer is considered to be at the origin with an ocular spacing of Δ*x*, what are the appropriate **lookat()** functions to produce a stereo image pair? **Hint:** We need to render the scene from two different camera locations (separated by Δ*x*). Consider two possible locations where these cameras can be pointed, i.e. the **center** location, to produce a stereoscopic image.
 
 ## Programming assignment
 
