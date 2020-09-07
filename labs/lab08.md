@@ -139,7 +139,7 @@ You should be able to build and run the program by clicking the small green arro
 
 At this point you should see a sphere and cube object that "disappears into the fog" as the camera moves away from the object using X and "reappears out of the fog" as the camera moves closer to the object using Z.
 
-> <img src="images/lab06/fogScene.png" alt="Fog Scene Window" height="500"/>
+> <img src="images/lab08/fogScene.png" alt="Fog Scene Window" height="500"/>
 
 To quit the program simply close the window.
 
