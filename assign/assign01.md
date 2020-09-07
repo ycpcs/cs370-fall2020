@@ -67,8 +67,7 @@ Write a program that draws a simple 2D "windmill" scene using OpenGL. The scene 
 >
 > Don't forget to *register* your callbacks, otherwise user interaction will have no effect.
 
-Grading Criteria
-================
+## Grading Criteria
 
 **The program MUST compile to receive any credit** (so develop incrementally).
 
@@ -92,15 +91,13 @@ You should be able to build and run the program by clicking the small green arro
 
 To quit the program simply close the window.
 
-Submitting to Marmoset
-======================
+## Submitting to Marmoset
 
 At the top right of the CLion window, expand the drop down menu to change the configuration to **MAKE\_ZIP** and click the green arrow
 
 > <img src="images/assign01/MakeZip.png" alt="Make Zip" height="100"/>
 
 You may see a configuration dialog, simply click the **Run** button and **Continue Anyway** in the Change Configuration Settings popup dialog. This should generate a **solution.zip** file in the project root directory. Log into [Marmoset](https://cs.ycp.edu/marmoset/login) and manually upload the **solution.zip** file to the **assign01** submission.
-
 
 **You are responsible for making sure that your submission contains the correct file(s).**
 
