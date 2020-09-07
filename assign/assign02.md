@@ -32,8 +32,13 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
     >
     > <img src="images/assign02/oblique2.png" alt="Generic Projection Matrix" height="100"/>
 
-2. Given the following scene and projections, determine the final size of the object in the rendered scene (**Note:** the *x*-axis is ignored.) **Hint:** Use similar triangles to relate the relative sizes of the objects to the relative distances from the camera.
+2. Given the following scene with the camera located at (x, 0, 1) looking at (x, 0, 2), sketch the viewing volume and determine the final size of the object in the rendered scene for the following projections (**Note:** the *x*-axis is ignored.) **Hint:** Use similar triangles to relate the relative sizes of the objects to the relative distances from the camera.
 
+> <img src="images/assign02/projection.png" alt="Projection Scene" height="200"/>
+
+-   ortho(x, x, -1, 1, -1, 4)
+
+-   frustum(x, x, -1, 1, 1, 4)
 
 3.  Some of my research has been in the area of stereoscopic 3D images, which is now used extensively for VR. To create a stereoscopic 3D image, we simply render the scene from two different viewpoints (one to represent what the left eye would see and one to represent what the right eye would see) and then display the corresponding image to each eye using the VR headset. If the viewer is considered to be at the origin with an ocular spacing of Δ*x*, what are the appropriate **lookat()** functions to produce a stereo image pair? **Hint:** We need to render the scene from two different camera locations (separated by Δ*x*). Consider two possible locations where these cameras can be pointed, i.e. the **center** location, to produce a stereoscopic image.
 
