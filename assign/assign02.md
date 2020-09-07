@@ -23,7 +23,7 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
 1.  Typically when we draw 3D objects on paper (or the board) we draw the *x* and *y* axes at 90 degrees (*x* axis pointing right and *y* axis pointing up). We then represent the *z* axis (which would be coming out of the board) by a line at -135 degrees from the *x* axis (diagonally down towards the left). This type of projection is known as an *oblique* projection. Determine the projection matrix that would render the objects in this fashion. 
 
-	> Hint: In order to achieve this projection, we need to find a *transformation matrix* that takes the standard axes and converts them as follows:
+	> **Hint:** In order to achieve this projection, we need to find a *transformation matrix* that takes the standard axes and converts them as follows:
 	>
     > <img src="images/assign02/oblique1.png" alt="Oblique Axes" height="50"/>
 
@@ -34,11 +34,11 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
 2. Given the following scene with the camera located at (x, 0, 1) looking at (x, 0, 2), sketch the viewing volume and determine the final size of the object in the rendered scene for the following projections (**Note:** the *x*-axis is ignored.) **Hint:** Use similar triangles to relate the relative sizes of the objects to the relative distances from the camera.
 
-> <img src="images/assign02/projection.png" alt="Projection Scene" height="200"/>
+    > <img src="images/assign02/projection.png" alt="Projection Scene" height="300"/>
 
--   ortho(x, x, -1, 1, -1, 4)
+    > -  ortho(x, x, -1, 1, -1, 4)
 
--   frustum(x, x, -1, 1, 1, 4)
+    > -   frustum(x, x, -1, 1, 1, 4)
 
 3.  Some of my research has been in the area of stereoscopic 3D images, which is now used extensively for VR. To create a stereoscopic 3D image, we simply render the scene from two different viewpoints (one to represent what the left eye would see and one to represent what the right eye would see) and then display the corresponding image to each eye using the VR headset. If the viewer is considered to be at the origin with an ocular spacing of Δ*x*, what are the appropriate **lookat()** functions to produce a stereo image pair? **Hint:** We need to render the scene from two different camera locations (separated by Δ*x*). Consider two possible locations where these cameras can be pointed, i.e. the **center** location, to produce a stereoscopic image.
 
