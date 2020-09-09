@@ -139,7 +139,7 @@ normal_matrix = model_matrix.inverse().transpose();
 
 The ambient reflection component is independent of the normals and can be thought of as an overall uniform illumination of the surface. Thus it is simply the product of the incident intensity with the material's ambient array components
 
-> <img src="images/lab09/ambient.png" alt="Ambient Term" height="100"/>
+> <img src="images/lab09/ambient.png" alt="Ambient Term" height="50"/>
 
 where *k*<sub>a</sub> is the material ambient component (per color channel), *L*<sub>a</sub> is the incident ambient light intensity, and *I*<sub>a</sub> is the final ambient light intensity per color channel.
 
@@ -147,7 +147,7 @@ where *k*<sub>a</sub> is the material ambient component (per color channel), *L*
 
 The diffuse reflection component is based on *Lambert's law* which states that the more directly the light shines on the surface, the brighter it will appear. Mathematically this is computed using the *dot product* between  **n** (the surface normal) and **l** (the light direction). When these two vectors are *parallel* (light shining directly onto surface), the dot product is one and hence there is maximal diffusive illumination. When the two vectors are *perpendicular* (light shining across surface), the dot product is zero and hence there is no diffusive illumination. Hence the formula based on the material's diffusive array components is
 
-> <img src="images/lab09/diffusive.png" alt="Diffusive Term" height="100"/>
+> <img src="images/lab09/diffusive.png" alt="Diffusive Term" height="50"/>
 
 where *k*<sub>d</sub> is the material diffusive component (per color channel), *L*<sub>d</sub> is the incident diffusive light intensity, (**n** ⋅ **l**) is the Lambert factor (clipped to a minimum value of 0), and *I*<sub>d</sub> is the final diffusive light intensity. This formula can also be extended to account for the *attenuation* due to distance the object is from the light source.
 
@@ -155,9 +155,9 @@ where *k*<sub>d</sub> is the material diffusive component (per color channel), *
 
 The specular reflection component is used to create highlights on an object (particular for shiny materials). These reflections will be greatest when the reflected light (which depends on the surface normal and the direction of the light source) is in the direction of the viewer. Mathematically this is computed using the *dot product* between **r** (the reflected light direction) and **v** (the viewer direction). When these two vectors are *parallel* (viewer looking directly at reflection), the dot product is one and hence there is maximal specular illumination. When the two vectors are *perpendicular* (viewer looking across reflection), the dot product is zero and hence there is no specular illumination. The shininess property determines how *focused* the highlight is, a high shininess coefficient creates a small bright spot whereas a low shininess coefficient creates a broader less bright spot. The formula based on the material's specular array components is
 
-> <img src="images/lab09/specular.png" alt="Specular Term" height="100"/>
+> <img src="images/lab09/specular.png" alt="Specular Term" height="50"/>
 
-where *k*<sub>s</sub> is the specular component (per color channel), *L*<sub>s</sub> is the incident specular light intensity, (**r** ⋅ **v**) is the specular factor (clipped to a minimum value of 0), α is the shininess exponent for the material, and *L*<sub>s</sub> is the final specular light intensity. An attenuation factor can also be applied to this component to account for the distance between the object and the light source. However, this computation can be expensive since the reflection vector needs to be computed. Alternatively, an approximation to the specular term can be computed using the *halfway vector* ()**h** = (**l** + **v**)/||**l**+**v**||) as **n**∙**h**
+where *k*<sub>s</sub> is the specular component (per color channel), *L*<sub>s</sub> is the incident specular light intensity, (**r** ⋅ **v**) is the specular factor (clipped to a minimum value of 0), α is the shininess exponent for the material, and *L*<sub>s</sub> is the final specular light intensity. An attenuation factor can also be applied to this component to account for the distance between the object and the light source. However, this computation can be expensive since the reflection vector needs to be computed. Alternatively, an approximation to the specular term can be computed using the *halfway vector* (**h** = (**l** + **v**)/\|\|**l**+**v**\|\|) as **n**∙**h**
 
 *Phong model*
 
