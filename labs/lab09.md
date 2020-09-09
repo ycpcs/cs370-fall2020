@@ -163,7 +163,7 @@ where *k*<sub>s</sub> is the specular component (per color channel), *L*<sub>s</
 
 The final intensity of each color channel is then simply the sum of the three reflection components as given by (not including attenuation)
 
-> <img src="images/lab09/Phongformula.png" alt="Phong Formula" height="20"/>
+> <img src="images/lab09/Phongformula.png" alt="Phong Formula" height="30"/>
 
 For Gouraud shading, we will implement this equation in the *vertex shader* and thus the lighting calculations, i.e. color, will be computed *per vertex* and then interpolated across the object. While this is more efficient for rendering, it may not produce as accurate of a visual effect.
 
@@ -171,7 +171,7 @@ For Gouraud shading, we will implement this equation in the *vertex shader* and 
 
 - Add code to **render\_scene()** to compute the *normal\_matrix* variable as the transposed inverse of the model matrix for each object
 
-- Add code to **gouraud.vert** in **main()** to compute **l** as the *negative* of the light direction
+- Add code to **gouraud.vert** in **main()** to compute **l** as the *negative* of the light direction (i.e. direction *towards* the light)
 
     ```cpp
     vec3 LightDirection = -normalize(Lights[0].direction);
