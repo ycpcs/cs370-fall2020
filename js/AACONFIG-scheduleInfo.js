@@ -54,6 +54,11 @@ courseInfo.classPeriods = [
 	{
 		topic: new Topic("** Exam 1", "")
 	},
+	{
+		topic: new Topic("Lab 9: Basic Gouraud Lighting ", "lab09.html"),
+		reading: "Ch. 7",
+		file: "CS370_Lab09"
+	},
 	
 ];
 
