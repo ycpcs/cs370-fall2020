@@ -60,7 +60,7 @@ courseInfo.classPeriods = [
 		file: "CS370_Lab09"
 	},
 	{
-		topic: new Topic("Lab 10: Advanced Phong Lighting ", "lab010.html"),
+		topic: new Topic("Lab 10: Advanced Phong Lighting ", "lab10.html"),
 		reading: "Ch. 7",
 		file: "CS370_Lab10"
 	},

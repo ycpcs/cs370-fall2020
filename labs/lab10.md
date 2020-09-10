@@ -56,22 +56,22 @@ Much of the computations for point and spot light sources is similar to Gouraud 
 - Add code to **phong.frag** in **main()** to compute a spot light effect which is similar to a point light only with an additional calculation to determine if the fragment is in the cone of illumination of the spot light and attenuate the contribution depending on the illumination profile
 
     ```cpp
-    vec3 LightDirection = normalize(vec3(Lights[i].position - Position));
-    // Determine if inside cone
-    float spotCos = dot(LightDirection, -normalize(Lights[i].direction));
-    if (spotCos >= Lights[i].spotCutoff) {
-        vec3 HalfVector = normalize(LightDirection + NormView);
-        float attenuation = pow(spotCos, Lights[i].spotExponent);
-        // Diffuse
-        float diff = max(0.0f, dot(NormNormal, LightDirection))*attenuation;
-        rgb += diff*vec3(Lights[i].diffuse*Materials[Material].diffuse);
-        if (diff > 0.0) {
-            // Specular term
-            float spec = pow(max(0.0f, dot(Normal, HalfVector)), Materials[Material].shininess)*attenuation;
-            rgb += spec*vec3(Lights[i].specular*Materials[Material].specular);
-        }
-    }
- 	```
+	vec3 LightDirection = normalize(vec3(Lights[i].position - Position));
+	// Determine if inside cone
+	float spotCos = dot(LightDirection, -normalize(Lights[i].direction));
+	if (spotCos >= Lights[i].spotCutoff) {
+		vec3 HalfVector = normalize(LightDirection + NormView);
+		float attenuation = pow(spotCos, Lights[i].spotExponent);
+		// Diffuse
+		float diff = max(0.0f, dot(NormNormal, LightDirection))*attenuation;
+		rgb += diff*vec3(Lights[i].diffuse*Materials[Material].diffuse);
+		if (diff > 0.0) {
+			// Specular term
+			float spec = pow(max(0.0f, dot(Normal, HalfVector)), Materials[Material].shininess)*attenuation;
+			rgb += spec*vec3(Lights[i].specular*Materials[Material].specular);
+		}
+	}
+	```
 
 **Note:** Notice that the light and material structs and arrays have been moved to the fragment shader.
 
