@@ -183,10 +183,11 @@ For Gouraud shading, we will implement this equation in the *vertex shader* and 
     vec3 Normal = vec3(normalize(norm_matrix * normalize(vec4(vNormal,0.0f))));
     ```
  
-- Add code to **gouraud.vert** in **main()** to compute **v** as the vector from the surface location (in world coordinates) to the camera position (eye)
+- Add code to **gouraud.vert** in **main()** to compute **v** as the vector from the transformed surface location (in world coordinates) to the camera position (eye)
 
     ```cpp
-    vec3 View = normalize(EyePosition - (model_matrix*vPosition).xyz);
+    vec4 Position = model_matrix*vPosition;
+    vec3 View = normalize(EyePosition - Position.xyz);
     ```
 
 - Add code to **gouraud.vert** in **main()** to compute **h** as the sum of the light direction and the view
