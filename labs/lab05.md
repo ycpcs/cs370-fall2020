@@ -51,7 +51,7 @@ glEnable(GL_CULL_FACE);
 
 - Add code to **display()** to clear the depth buffer via the **GL\_DEPTH\_BUFFER\_BIT** flag. What happens if you forget to do this?
 
-- Add code to **build\_geometry()** to initialize the **indices[]** array for all six faces based on the provided vertices which are shown in the figure below. **Hint:** You will need two triangles (with proper orientation) for each of the six faces, thus there should be 24 indices. Had we used separate vertices for each face, we would have used **three times** the amount of memory for the vertex buffer.
+- Add code to **build\_geometry()** to initialize the **indices[]** array for all six faces based on the provided vertices which are shown in the figure below. **Hint:** You will need two triangles (with proper orientation) for each of the six faces, thus there should be 36 indices. Had we used separate vertices for each face, we would have used more than **three times** the amount of memory for the vertex buffer.
 
 > <img src="images/lab05/cubevert.png" alt="Cube Vertices" height="200"/>
 
@@ -126,7 +126,7 @@ Thus if we store the window sizes in global variables when the window is initial
 
 - Add code to **main()** to get the initial window sizes storing the results in **ww** and **hh**
 
-- Add code to **framebuffer\_size\_callback()** to update **ww** and **hh* with the *width* and *height* parameters
+- Add code to **framebuffer\_size\_callback()** to update **ww** and **hh** with the *width* and *height* parameters
 
 - Add code to **main()** to register the *framebuffer\_size\_callback* resize callback
 
