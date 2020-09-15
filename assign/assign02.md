@@ -82,8 +82,8 @@ Write a program that draws a 3D "train" scene using OpenGL. A sample executable 
 
 -   Complete train: 15 points
 -   Train perspective: 10 points
--   Display lists: 5 points
 -   Animated train: 5 points
+-   Animated wheels: 5 points
 -   Dynamic orthographic camera (3rd person): 5 points
 -   Dynamic perspective camera (1st person): 5 points
 -   Creativity: 10 points
