@@ -64,6 +64,11 @@ courseInfo.classPeriods = [
 		reading: "Ch. 7",
 		file: "CS370_Lab10"
 	},
+	{
+		topic: new Topic("Lab 11: Alpha Blending (Transparency) ", "lab11.html"),
+		reading: "Ch. 4",
+		file: "CS370_Lab11"
+	},
 	
 ];
 
