@@ -215,7 +215,7 @@ You should be able to build and run the program by clicking the small green arro
 
 At this point you should see a gradient cube with a solid sphere on top that can be adjusted with a spherical coordinate perspective camera.
 
-> <img src="images/lab06/ShaderScene.png" alt="Shader Scene Window" height="500"/>
+> <img src="images/lab07/ShaderScene.png" alt="Shader Scene Window" height="500"/>
 
 To quit the program simply close the window.
 
