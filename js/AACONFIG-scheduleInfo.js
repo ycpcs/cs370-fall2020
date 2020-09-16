@@ -55,19 +55,32 @@ courseInfo.classPeriods = [
 		topic: new Topic("** Exam 1", "")
 	},
 	{
-		topic: new Topic("Lab 9: Basic Gouraud Lighting ", "lab09.html"),
+		topic: new Topic("Lab 9: Basic Gouraud Lighting", "lab09.html"),
 		reading: "Ch. 7",
 		file: "CS370_Lab09"
 	},
 	{
-		topic: new Topic("Lab 10: Advanced Phong Lighting ", "lab10.html"),
+		topic: new Topic("Lab 10: Advanced Phong Lighting", "lab10.html"),
 		reading: "Ch. 7",
 		file: "CS370_Lab10"
 	},
 	{
-		topic: new Topic("Lab 11: Alpha Blending (Transparency) ", "lab11.html"),
+		topic: new Topic("Lab 11: Alpha Blending (Transparency)", "lab11.html"),
 		reading: "Ch. 4",
 		file: "CS370_Lab11"
+	},
+	{
+		topic: new Topic("Lab 12: Blender Meshes", "lab12.html"),
+		reading: "",
+		file: "CS370_Lab12"
+	},
+	{
+		topic: new Topic("Exam Review", ""),
+		reading: "",
+		file: ""
+	},
+	{
+		topic: new Topic("** Exam 2", "")
 	},
 	
 ];
@@ -75,8 +88,8 @@ courseInfo.classPeriods = [
 // The following is for the college-scheduled final exam.
 // It is not used if final is on last day of class"
 courseInfo.finalExamDates = [
-		new FinalExamDay("101", new Date("12/05/2020 10:15:00")),
 		new FinalExamDay("102", new Date("12/03/2020 10:15:00")),
+		new FinalExamDay("101", new Date("12/05/2020 10:15:00")),
 //		new FinalExamDay("103", new Date("12/13/2019 12:45:00")),
 //		new FinalExamDay("104", new Date("12/13/2019 15:00:00"))
 ];
