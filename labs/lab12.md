@@ -55,7 +55,7 @@ Select the location where you want to export the file and the name for the file.
 
 ### Tasks
 
-- Export the mesh to a directory of your choice naming the file **monkey.obj**
+- Export the mesh to the **models** directory in **CS370\_Lab12** naming the file **monkey.obj**
 
 - Add code to **build\_geometry()** to import the monkey model which should render it in the application
 
