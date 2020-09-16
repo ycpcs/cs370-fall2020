@@ -47,7 +47,7 @@ where *src\_val*, and *dest\_val* are the factors used in the blending function.
 
 For source and destination colors given by (Rs,Gs,Bs,As) and (Rd,Gd,Bd,Ad), these blending factors combine the colors as follows
 
-> <img src="images/lab12/SrcOneMinusSrc.png" alt="Source/One Minus Source Alpha Equations" height="100"/>
+> <img src="images/lab11/SrcOneMinusSrc.png" alt="Source/One Minus Source Alpha Equations" height="100"/>
 
 These factors guarantee that the color channels *remain bounded* within the range [0.0,1.0] and hence will appear more or less correct. However, the problem is that to use these factors properly, *rendering order is important*. In particular, objects *must* be rendered from *back-to-front* (i.e. using a painter's algorithm) to produce the proper final color. This is typically not difficult for static scenes, but for ones where the object positions are changing either relative to each other or relative to the camera, maintaing proper rendering order can be tricky.
 
@@ -55,7 +55,7 @@ These factors guarantee that the color channels *remain bounded* within the rang
 
 For source and destination colors given by (Rs,Gs,Bs,As) and (Rd,Gd,Bd,Ad), these blending factors combine the colors as follows
 
-> <img src="images/lab10/SrcOne.png" alt="Source/One Alpha Equations" height="100"/>
+> <img src="images/lab11/SrcOne.png" alt="Source/One Alpha Equations" height="100"/>
 
 These factors guarantee that the same color is rendered *regardless of order* and hence is much better for dynamic scenes. However, since the final color is simply the total sum of all the object colors, the final color may saturate in one or several of the color channels, i.e. be greater than one and hence be clipped to 1.0 when rendered. Thus the final color may not be the expected color (or may simply be white if all the color channels saturate).
 
