@@ -21,15 +21,15 @@ For this lab you will also need to install [Blender](www.blender.org).
 
 When Blender is first opened, there is a default cube centered at the origin.
 
-> <img src="images/lab12/Blender.png" alt="Blender Window" height="500"/>
+> <img src="images/lab12/Blender.png" alt="Blender Window" height="400"/>
 
 To delete this stock object, simply right-click and select **Delete**.
 
-> <img src="images/lab12/BlenderDelete.png" alt="Blender Delete Window" height="500"/>
+> <img src="images/lab12/BlenderDelete.png" alt="Blender Delete Window" height="400"/>
 
 Then to add a new mesh (at the origin) simply hit \<Shift\>-A which should pop up the add dialog and select Mesh which should pop out a list of mesh objects that are built in to Blender.
 
-> <img src="images/lab12/BlenderAdd.png" alt="Blender Add Window" height="500"/>
+> <img src="images/lab12/BlenderAdd.png" alt="Blender Add Window" height="400"/>
 
 After the mesh has been added, there may be a dialog box in the lower left portion of the main window that will allow configuration of the added mesh typically including the default size, location, and orientation.
 
@@ -47,7 +47,7 @@ Some additional meshes can be obtained by selecting the drop down menu in the lo
 
 To export the mesh, from the menu bar select **File->Export->Wavefront (.obj)**
 
-> <img src="images/lab12/BlenderExport.png" alt="Blender Export Window" height="500"/>
+> <img src="images/lab12/BlenderExport.png" alt="Blender Export Window" height="400"/>
 
 Select the location where you want to export the file and the name for the file. In the lower right panel, expand the Geometry tab and make sure the selections match the figure below, i.e. only **Apply Modifiers**, **Write Normals**, **Include UVs**, and **Triangulate Faces** are checked. This will produce a file that can be imported by the basic model loader we are using.
 
@@ -67,7 +67,7 @@ You should be able to build and run the program by clicking the small green arro
 
 At this point you should see a bouncing sphere and torus rolling around a translucent cone.
 
-> <img src="images/lab11/blenderMonkey.png" alt="Blender Monkey Window" height="500"/>
+> <img src="images/lab12/blenderMonkey.png" alt="Blender Monkey Window" height="500"/>
 
 To quit the program simply close the window.
 
