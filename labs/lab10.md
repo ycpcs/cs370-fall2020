@@ -87,4 +87,4 @@ To quit the program simply close the window.
 
 Congratulations, you have now written an application with more advanced lighting.
 
-Next we will investigate how to add shadows into our scenes.
+Next we will investigate how to incorporate transparency into our scenes.
