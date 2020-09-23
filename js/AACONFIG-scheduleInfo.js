@@ -86,6 +86,7 @@ courseInfo.classPeriods = [
 		topic: new Topic("Lab 13: Texture Mapping", "lab13.html"),
 		reading: "Ch. 6",
 		file: "CS370_Lab13"
+	},
 	
 ];
 
