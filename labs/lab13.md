@@ -181,7 +181,7 @@ You should be able to build and run the program by clicking the small green arro
 
 At this point you should see a textured moon orbiting a textured earth (**note:** they are *not* astronomically correct) with a tiled space background.
 
-> <img src="images/lab10/earthMoon.png" alt="Earth Moon Scene Window" height="500"/>
+> <img src="images/lab13/earthMoon.png" alt="Earth Moon Scene Window" height="500"/>
 
 To quit the program simply close the window.
 
