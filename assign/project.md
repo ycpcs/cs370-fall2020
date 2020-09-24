@@ -94,7 +94,7 @@ The program will be graded based on the number of features implemented along wit
 
 You should be able to build and run the program by clicking the small green arrow towards the right of the top toolbar.
 
-> <img src="images/project/House.png" alt="Final Project Window" height="500"/>
+> <img src="images/project/House.png" alt="Final Project Window" height="400"/>
 
 To quit the program simply close the window.
 
