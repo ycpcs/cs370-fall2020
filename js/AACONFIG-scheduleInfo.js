@@ -76,7 +76,7 @@ courseInfo.classPeriods = [
 	},
 	{
 		topic: new Topic("Exam Review", ""),
-		reading: "",
+		reading: "<a href=ex1review.pdf \> Exam 1 Review Problems <\a>",
 		file: ""
 	},
 	{
