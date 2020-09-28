@@ -9,7 +9,7 @@ title: "Assignment 3: Limelight"
 
 **Milestone 1: Thursday, Oct 8th by 11:59 PM** 
 
-**Milestone 2: Monday, Oct 20th by 11:59 PM** Late assignments will be penalized 20 points per day.
+**Milestone 2: Monday, Oct 19th by 11:59 PM** Late assignments will be penalized 20 points per day.
 
 ## Getting Started
 
@@ -43,15 +43,15 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
     > - (0.7f, 0.2f, 0.2f, 0.6f)
     > - (0.5f, 0.5f, 0.8f, 0.4f)
     
-What is the final blended color for that pixel using blend factors
+> What is the final blended color for that pixel using blend factors
 
-    > - **GL\_SRC\_ALPHA**/**GL\_ONE\_MINUS\_SRC\_ALPHA**
-    > - **GL\_SRC\_ALPHA**/**GL\_ONE** 
+> - **GL\_SRC\_ALPHA**/**GL\_ONE\_MINUS\_SRC\_ALPHA**
+> - **GL\_SRC\_ALPHA**/**GL\_ONE** 
 
 ### Programming assignment
 
 
-Write a program that draws a 3D stage scene with three "actors" and several lights using OpenGL. A sample executable is included in the **demo** directory as either **LimeLightSolWin*.exe*, **LimeLightSolMac**, or **LimeLightSolLinux**. The scene should include:
+Write a program that draws a 3D stage scene with three "actors" and several lights using OpenGL. A sample executable is included in the **demo** directory as either **LimeLightSolWin.exe***, **LimeLightSolMac**, or **LimeLightSolLinux**. The scene should include:
 
 -   A stage which is a rectangular cube with an elliptical front.
 -   Three "actors" on the stage consisting of a cube, sphere, and octahedron.
@@ -94,7 +94,7 @@ Write a program that draws a 3D stage scene with three "actors" and several ligh
 -   Sphere object: 5 points
 -   Sphere material: 5 points
 
-**Milestone 2** - 55 points
+**Milestone 2** - 65 points
 
 -   Stage edge: 10 points
 -   Cube object: 5 points
