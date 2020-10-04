@@ -87,6 +87,11 @@ courseInfo.classPeriods = [
 		reading: "Ch. 6",
 		file: "CS370_Lab13"
 	},
+	{
+		topic: new Topic("Lab 14: Scene Graphs", "lab14.html"),
+		reading: "",
+		file: "CS370_Lab14"
+	},
 	
 ];
 

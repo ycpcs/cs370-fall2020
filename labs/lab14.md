@@ -37,11 +37,11 @@ Subclasses of **BaseNode** will then create specific implementations for differe
 
 For this lab we will be constructing a simple robot with a circular base, a single lower arm, and two upper arms along with a separate spinning Earth sphere.
 
-> <img src="images/lab14/RobotPic.png" alt="Robot Picture" height="200"/>
+> <img src="images/lab14/RobotPic.png" alt="Robot Picture" height="300"/>
 
 A diagram for the robot as a scene graph would be
 
-> <img src="images/lab14/RobotDiag.png" alt="Robot Diagram" height="200"/>
+> <img src="images/lab14/RobotDiag.png" alt="Robot Diagram" height="300"/>
 
 Note: Whenever a node does not have a child or sibling, its corresponding field should be set to **NULL**. A more general technique would be to *dynamically allocate* nodes as needed, i.e. similar to maintaining a linked-list, when the number of objects in the scene is variable (e.g. projectiles).
 
@@ -53,7 +53,7 @@ So for example the base node (assuming it is **MatNode base** with a lower arm n
     base.set_buffers(VAOs[Cylinder], ObjBuffers[Cylinder][PosBuffer], light_vPos,
                      posCoords, ObjBuffers[Cylinder][NormBuffer], light_vNorm, 
                      normCoords, numVertices[Cylinder]);
-	base.set_materials(MaterialBuffers[MaterialBuffer], materials_block_idx, 
+    base.set_materials(MaterialBuffers[MaterialBuffer], materials_block_idx, 
 	                   Materials.size()*sizeof(MaterialProperties), material_loc,
 	                MaterialIdx[Cylinder]);
     base.set_lights(LightBuffers[LightBuffer], lights_block_idx, 
@@ -85,9 +85,9 @@ Once we have created the tree structure by setting the various node fields, we n
 
 - Add code to **build\_scene\_graph()** to update all the nodes. In particular:
 
-> -   Base - rotate by angle **theta** about the *y*-axis.
-> -   Lower arm - translate up by **BASE\_HEIGHT** (to position it on top of the base) and rotate by angle **phi** about the *x*-axis.
-> -   Upper arms - translate up by **2\*LOWER\_HEIGHT** (to position it on top of the lower arm) and over in *x* by **±(LOWER\_WIDTH + UPPER\_WIDTH)** (to position them on the left/right side of the lower arm) and rotate by angle *left/right\_psi* about the *x*-axis.
+> -   **Base** - rotate by angle **theta** about the *y*-axis.
+> -   **Lower arm** - translate up by **BASE\_HEIGHT** (to position it on top of the base) and rotate by angle **phi** about the *x*-axis.
+> -   **Upper arms** - translate up by **2\*LOWER\_HEIGHT** (to position it on top of the lower arm) and over in *x* by **±(LOWER\_WIDTH + UPPER\_WIDTH)** (to position them on the left/right side of the lower arm) and rotate by angle *left/right\_psi* about the *x*-axis.
 - Add code to **key\_callback( )** to call the same update functions for the appropriate nodes when the user presses the corresponding keys. NOTE: This step is extremely important if you wish any user input to affect the scene
 
 ## Rendering the Scene Graph
