@@ -95,7 +95,9 @@ Thus from a top down view
 Thus we can compute the coordinates of *center* (whenever we adjust *eye* or change θ) as
 
 > *center*<sub>x</sub> = *eye*<sub>x</sub> + cos(θ)
+>
 > *center*<sub>y</sub> = *eye*<sub>y</sub>
+>
 > *center*<sub>z</sub> = *eye*<sub>z</sub> + sin(θ)
 
 To move along the current direction, we can compute a direction vector (component-wise in *x* and *z*) as
