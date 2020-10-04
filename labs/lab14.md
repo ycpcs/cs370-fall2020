@@ -54,8 +54,8 @@ So for example the base node (assuming it is **MatNode base** with a lower arm n
                      posCoords, ObjBuffers[Cylinder][NormBuffer], light_vNorm, 
                      normCoords, numVertices[Cylinder]);
     base.set_materials(MaterialBuffers[MaterialBuffer], materials_block_idx, 
-	                   Materials.size()*sizeof(MaterialProperties), material_loc,
-	                MaterialIdx[Cylinder]);
+                       Materials.size()*sizeof(MaterialProperties), material_loc,
+                       MaterialIdx[Cylinder]);
     base.set_lights(LightBuffers[LightBuffer], lights_block_idx, 
                     Lights.size()*sizeof(LightProperties), num_lights_loc,
                     Lights.size());
