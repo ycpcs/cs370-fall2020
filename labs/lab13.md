@@ -13,7 +13,7 @@ Navigate into the **CS370\labs** directory on your **H:** drive.
 
 Download [CS370\_Lab13.zip](src/CS370_Lab13.zip), saving it into the **labs** directory.
 
-Double-click on **CS370\_Lab13.zip** and extract the contents of the archive into a subdirectory called **CS370\_Lab10**
+Double-click on **CS370\_Lab13.zip** and extract the contents of the archive into a subdirectory called **CS370\_Lab13**
 
 Open CLion, select **Open or Import** from the main screen (you may need to close any open projects), and navigate to the **CS370\_Lab13** directory. This should open the project and execute the [CMake](https://cmake.org) script to configure the toolchain.
 
@@ -187,4 +187,4 @@ To quit the program simply close the window.
 
 Congratulations, you have now written an application with texture mapping.
 
-Next we will investigate how to add shadows into our scenes.
+Next we will investigate how to create scenes using a scene graph data structure.
