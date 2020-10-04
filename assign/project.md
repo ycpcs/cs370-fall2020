@@ -84,6 +84,32 @@ Some embellishment suggestions:
 
 Most of all - **HAVE FUN!** and be creative with this project.
 
+### First Person Camera
+
+In order to accomplish a first person camera where the controls move or rotate the camera along the viewing direction, we will use an approach similar to the spherical coordinates discussed in [Lab 6](../labs/lab06.html). We will use an azimuth angle, θ, to create the **center** vector *relative* to the **eye** vector which will define a vector for the direction the camera is facing. Thus when we move forward or backward, we will simply update **eye** along this direction (with a corresponding update of **center**). Rotation will simply update **center** via θ since it does not involve a change in camera position.
+
+Thus from a top down view
+
+> <img src="images/project/camera.png" alt="Camera Diagram" height="100"/>
+
+Thus we can compute the coordinates of *center* (whenever we adjust *eye* or change θ) as
+
+    *center*<sub>x</sub> = *eye*<sub>x</sub> + cos(θ)
+    *center*<sub>y</sub> = *eye*<sub>y</sub>
+    *center*<sub>z</sub> = *eye*<sub>z</sub> + sin(θ)
+
+To move along the current direction, we can compute a direction vector (component-wise in *x* and *z*) as
+
+    *dir* = *center* - *eye*
+    
+Then we can update *eye* along *dir* by an amount Δ (component-wise in *x* and *z*) as
+
+    *eye* = *eye* + *dir*\*Δ
+
+which will then require a corresponding update in *center* as described above.
+
+Adjusting the camera to look up/down can be done by adjusting the *y* component of *center* with an elevation angle (typically *without* adjusting the *y* component of *eye*).
+
 ## Grading Criteria
 
 **The program MUST compile to receive any credit** (so develop incrementally).
