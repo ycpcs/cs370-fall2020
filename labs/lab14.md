@@ -20,7 +20,7 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 For the tree structure we will be using a *child/sibling* tree structure. The base node structure contains (among other things) two transformation matrices, *pointers* to connecting nodes, and an abstract draw method as follows:
 
 ```cpp
-	// Object properties
+    // Object properties
     vmath::mat4 BaseTransform;
 	vmath::mat4 ModelTransform;
 	BaseNode *sibling;
@@ -37,22 +37,28 @@ Subclasses of **BaseNode** will then create specific implementations for differe
 
 For this lab we will be constructing a simple robot with a circular base, a single lower arm, and two upper arms along with a separate spinning Earth sphere.
 
-> <img src="images/lab14/RobotPic.png" alt="Robot Picture" height="100"/>
+> <img src="images/lab14/RobotPic.png" alt="Robot Picture" height="200"/>
 
 A diagram for the robot as a scene graph would be
 
-> <img src="images/lab14/RobotDiag.png" alt="Robot Diagram" height="100"/>
+> <img src="images/lab14/RobotDiag.png" alt="Robot Diagram" height="200"/>
 
 Note: Whenever a node does not have a child or sibling, its corresponding field should be set to **NULL**. A more general technique would be to *dynamically allocate* nodes as needed, i.e. similar to maintaining a linked-list, when the number of objects in the scene is variable (e.g. projectiles).
 
-So for example the base node (assuming it is **MatNode base;** with a lower arm node named **MatNode lower\_arm**) could be created as follows
+So for example the base node (assuming it is **MatNode base** with a lower arm node named **MatNode lower\_arm**) could be created as follows
 
 ```cpp
     base.set_shader(light_program, light_proj_mat_loc, light_camera_mat_loc, light_model_mat_loc);
     base.NormMatPtr = light_norm_mat_loc;
-    base.set_buffers(VAOs[Cylinder], ObjBuffers[Cylinder][PosBuffer], light_vPos, posCoords, ObjBuffers[Cylinder][NormBuffer], light_vNorm, normCoords, numVertices[Cylinder]);
-	base.set_materials(MaterialBuffers[MaterialBuffer], materials_block_idx, Materials.size()*sizeof(MaterialProperties), material_loc, MaterialIdx[Cylinder]);
-    base.set_lights(LightBuffers[LightBuffer], lights_block_idx, Lights.size()*sizeof(LightProperties), num_lights_loc, Lights.size());
+    base.set_buffers(VAOs[Cylinder], ObjBuffers[Cylinder][PosBuffer], light_vPos,
+                     posCoords, ObjBuffers[Cylinder][NormBuffer], light_vNorm, 
+                     normCoords, numVertices[Cylinder]);
+	base.set_materials(MaterialBuffers[MaterialBuffer], materials_block_idx, 
+	                   Materials.size()*sizeof(MaterialProperties), material_loc,
+	                MaterialIdx[Cylinder]);
+    base.set_lights(LightBuffers[LightBuffer], lights_block_idx, 
+                    Lights.size()*sizeof(LightProperties), num_lights_loc,
+                    Lights.size());
     base.set_eye(light_eye_loc, eye);
     base.set_base_transform(scale(vec3(BASE_RADIUS, BASE_HEIGHT, BASE_RADIUS)));
     base.sibling = NULL;
@@ -63,11 +69,11 @@ So for example the base node (assuming it is **MatNode base;** with a lower arm 
 
 - Add code to **build\_scene\_graph()** to initialize the fields of the four nodes
 
-    > -   **Base** - Use the *light_program* shader and references using the **set\_shader()** method, set the NormMatPtr field to the appropriate light shader reference, set the buffers to the *Cylinder* using the **set\_buffers()** method, set the materials using the **set\_materials()** method, set the lights using the **set\_lights()** method, set the camera location using the **set_eye()** method, set the base transformation to scale the cylinder by **BASE\_RADIUS** in *x* and *z* and **BASE\_HEIGHT** in *y* using the **set_base_transform()** method, set the sibling pointer to **NULL**, and the *child* pointer to the lower arm. **Hint:** Use the code above as a starting point.
-    > -   **Lower Arm** - Construct the lower arm similar to the base but using the *Cube* index for the buffers and setting the base transformation to scale it to **LOWER\_WIDTH** **LOWER\_HEIGHT** and **LOWER\_DEPTH**, then translate it in *y* by **LOWER\_HEIGHT** (so it is positioned on the x-z plane), and make the *child* the left upper arm
-    > -   **Upper Arms** - Construct the upper arms similar to the lower arm but scaled by **UPPER\_WIDTH** **UPPER\_HEIGHT** and **UPPER\_DEPTH**, then translated in *y* by **UPPER\_HEIGHT** (so it is positioned on the x-z plane), and make the right upper arm a *sibling* of the left upper arm 
-    >
-    > Set empty node pointers to **NULL** and remember to use **&** to set the *address* of a connecting node to the pointer.
+> -   **Base** - Use the *light_program* shader and references using the **set\_shader()** method, set the NormMatPtr field to the appropriate light shader reference, set the buffers to the *Cylinder* using the **set\_buffers()** method, set the materials using the **set\_materials()** method, set the lights using the **set\_lights()** method, set the camera location using the **set_eye()** method, set the base transformation to scale the cylinder by **BASE\_RADIUS** in *x* and *z* and **BASE\_HEIGHT** in *y* using the **set_base_transform()** method, set the sibling pointer to **NULL**, and the *child* pointer to the lower arm. **Hint:** Use the code above as a starting point.
+> -   **Lower Arm** - Construct the lower arm similar to the base but using the *Cube* index for the buffers and setting the base transformation to scale it to **LOWER\_WIDTH** **LOWER\_HEIGHT** and **LOWER\_DEPTH**, then translate it in *y* by **LOWER\_HEIGHT** (so it is positioned on the x-z plane), and make the *child* the left upper arm
+> -   **Upper Arms** - Construct the upper arms similar to the lower arm but scaled by **UPPER\_WIDTH** **UPPER\_HEIGHT** and **UPPER\_DEPTH**, then translated in *y* by **UPPER\_HEIGHT** (so it is positioned on the x-z plane), and make the right upper arm a *sibling* of the left upper arm 
+>
+> Set empty node pointers to **NULL** and remember to use **&** to set the *address* of a connecting node to the pointer.
 
 ## Local Transformation Updates
 
@@ -79,11 +85,10 @@ Once we have created the tree structure by setting the various node fields, we n
 
 - Add code to **build\_scene\_graph()** to update all the nodes. In particular:
 
-    > -   Base - rotate by angle **theta** about the *y*-axis.
-    > -   Lower arm - translate up by **BASE\_HEIGHT** (to position it on top of the base) and rotate by angle **phi** about the *x*-axis.
-    > -   Upper arms - translate up by **2\*LOWER\_HEIGHT** (to position it on top of the lower arm) and over in *x* by **±(LOWER\_WIDTH + UPPER\_WIDTH)** (to position them on the left/right side of the lower arm) and rotate by angle *left/right\_psi* about the *x*-axis.
+> -   Base - rotate by angle **theta** about the *y*-axis.
+> -   Lower arm - translate up by **BASE\_HEIGHT** (to position it on top of the base) and rotate by angle **phi** about the *x*-axis.
+> -   Upper arms - translate up by **2\*LOWER\_HEIGHT** (to position it on top of the lower arm) and over in *x* by **±(LOWER\_WIDTH + UPPER\_WIDTH)** (to position them on the left/right side of the lower arm) and rotate by angle *left/right\_psi* about the *x*-axis.
 - Add code to **key\_callback( )** to call the same update functions for the appropriate nodes when the user presses the corresponding keys. NOTE: This step is extremely important if you wish any user input to affect the scene
-
 
 ## Rendering the Scene Graph
 
@@ -91,7 +96,7 @@ Finally we can render the scene by simply *traversing* the tree in a *depth-firs
 
 ```cpp
 void traverse_scene_graph(BaseNode *node, mat4 baseTransform) {
-	mat4 model_matrix;
+    mat4 model_matrix;
 
     // Stop when at bottom of branch
     if (node == NULL) {
@@ -135,7 +140,7 @@ To place additional *independent* objects into a scene graph, we can simply make
 
 You should be able to build and run the program by clicking the small green arrow towards the right of the top toolbar.
 
-At this point you should see a robot with a spinning textured earth. You can manipulate the robot using a,d to rotate the base, w,s to rotate the lower arm, and n,m ,/. to rotate the left/right upper arms. **Note:** Adjusting the robot does *not* affect the earth.
+At this point you should see a robot with a spinning textured earth. You can manipulate the robot using a,d to rotate the base, w,s to rotate the lower arm, and n,m ,. to rotate the left/right upper arms. **Note:** Adjusting the robot does *not* affect the earth.
 
 > <img src="images/lab14/robotGraph.png" alt="Robot Scene Graph Window" height="500"/>
 
