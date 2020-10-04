@@ -90,21 +90,21 @@ In order to accomplish a first person camera where the controls move or rotate t
 
 Thus from a top down view
 
-> <img src="images/project/camera.png" alt="Camera Diagram" height="100"/>
+> <img src="images/project/camera.png" alt="Camera Diagram" height="300"/>
 
 Thus we can compute the coordinates of *center* (whenever we adjust *eye* or change θ) as
 
-    *center*<sub>x</sub> = *eye*<sub>x</sub> + cos(θ)
-    *center*<sub>y</sub> = *eye*<sub>y</sub>
-    *center*<sub>z</sub> = *eye*<sub>z</sub> + sin(θ)
+> *center*<sub>x</sub> = *eye*<sub>x</sub> + cos(θ)
+> *center*<sub>y</sub> = *eye*<sub>y</sub>
+> *center*<sub>z</sub> = *eye*<sub>z</sub> + sin(θ)
 
 To move along the current direction, we can compute a direction vector (component-wise in *x* and *z*) as
 
-    *dir* = *center* - *eye*
+> *dir* = *center* - *eye*
     
 Then we can update *eye* along *dir* by an amount Δ (component-wise in *x* and *z*) as
 
-    *eye* = *eye* + *dir*\*Δ
+> *eye* = *eye* + *dir*\*Δ
 
 which will then require a corresponding update in *center* as described above.
 
