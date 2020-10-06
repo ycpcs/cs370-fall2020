@@ -65,7 +65,7 @@ This lab is simply to create simple geometry meshes in Blender that can be loade
 
 You should be able to build and run the program by clicking the small green arrow towards the right of the top toolbar.
 
-At this point you should see a bouncing sphere and torus rolling around a translucent cone.
+At this point you should see a cube and Blender monkey with lighting.
 
 > <img src="images/lab12/blenderMonkey.png" alt="Blender Monkey Window" height="500"/>
 
