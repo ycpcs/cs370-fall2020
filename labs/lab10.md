@@ -37,7 +37,7 @@ Thus to create a spotlight we need to specify the position of the light (again a
 
 ### Tasks
 
-- Add code to **build\_lights()** to create a **LightProperties** variable named *greenSpotLight* that is a *SPOT* light located at (0.0f, 4.0f, 0.0f, 1.0f) pointing in the (0.0f, -1.0f, 0.0f) direction (directly above the object pointing straight down) with a cutoff angle of 30.0f and an exponent of 0.0f using (0.0f, 0.0f, 0.0f, 1.0f) for the ambient, (0.0f, 1.0f, 0.0f, 1.0f) for the diffuse, and (1.0f, 1.0f, 1.0f, 1.0f) for the specular. **Note:** Don't forget to also add the pad to the structure.
+- Add code to **build\_lights()** to create a **LightProperties** variable named *greenSpotLight* that is a *SPOT* light located at (0.0f, 4.0f, 0.0f, 1.0f) pointing in the (0.0f, -1.0f, 0.0f) direction (directly above the object pointing straight down) with a cutoff angle of 30.0f and an exponent of 30.0f using (0.0f, 0.0f, 0.0f, 1.0f) for the ambient, (0.0f, 1.0f, 0.0f, 1.0f) for the diffuse, and (1.0f, 1.0f, 1.0f, 1.0f) for the specular. **Note:** Don't forget to also add the pad to the structure.
 
 - Add code to **build\_lights()** to add the *greenSpotLight* to the *Lights* vector using the **push\_back()** method.
 
