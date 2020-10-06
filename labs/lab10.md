@@ -59,7 +59,8 @@ Much of the computations for point and spot light sources is similar to Gouraud 
 	vec3 LightDirection = normalize(vec3(Lights[i].position - Position));
 	// Determine if inside cone
 	float spotCos = dot(LightDirection, -normalize(Lights[i].direction));
-	if (spotCos >= Lights[i].spotCutoff) {
+	float coneCos = cos(radians(Lights[i].spotCutoff));
+	if (spotCos >= coneCos) {
 		vec3 HalfVector = normalize(LightDirection + NormView);
 		float attenuation = pow(spotCos, Lights[i].spotExponent);
 		// Diffuse
