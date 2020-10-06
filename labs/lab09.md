@@ -75,11 +75,10 @@ struct LightProperties {
 	vmath::vec4 diffuse;
 	vmath::vec4 specular;
 	vmath::vec4 position;
-	vmath::vec3 direction;
-	GLfloat pad2;
+	vmath::vec4 direction;
 	GLfloat spotCutoff;
 	GLfloat spotExponent;
-	GLfloat pad3[2];
+	GLfloat pad2[2];
 };
 ```
 
@@ -92,11 +91,10 @@ LightProperties whiteLight = {DIRECTIONAL, //type
                                 vec4(1.0f, 1.0f, 1.0f, 1.0f), //diffuse
                                 vec4(1.0f, 1.0f, 1.0f, 1.0f), //specular
                                 vec4(0.0f, 0.0f, 0.0f, 1.0f),  //position
-                                vec3(-1.0f, -1.0f, -1.0f), //direction
-                                0.0f,       //pad2
+                                vec4(-1.0f, -1.0f, -1.0f, 0.0f), //direction
                                 0.0f,   //cutoff
                                 0.0f,  //exponent
-                                {0.0f, 0.0f}  //pad3
+                                {0.0f, 0.0f}  //pad2
 };
 ```
 
@@ -171,10 +169,10 @@ For Gouraud shading, we will implement this equation in the *vertex shader* and 
 
 - Add code to **render\_scene()** to compute the *normal\_matrix* variable as the transposed inverse of the model matrix for each object
 
-- Add code to **gouraud.vert** in **main()** to compute **l** as the *negative* of the light direction (i.e. direction *towards* the light)
+- Add code to **gouraud.vert** in **main()** to compute **l** as the *negative* of the light direction (i.e. direction *towards* the light) as a **vec3**
 
     ```cpp
-    vec3 LightDirection = -normalize(Lights[0].direction);
+    vec3 LightDirection = -normalize(vec3(Lights[0].direction));
     ```
     
 - Add code to **gouraud.vert** in **main()** to compute **n** by transforming the vertex normal by the normal matrix
