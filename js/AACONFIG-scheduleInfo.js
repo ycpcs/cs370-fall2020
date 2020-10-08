@@ -92,7 +92,12 @@ courseInfo.classPeriods = [
 		reading: "",
 		file: "CS370_Lab14"
 	},
-	
+	{
+		topic: new Topic("Lab 15: Shadow Mapping", "lab15.html"),
+		reading: "Ch. 7 <br /> <a href=https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping \> LearnOpenGL Shadow Mapping Tutorial <\a>",
+		file: "CS370_Lab15"
+	},
+
 ];
 
 // The following is for the college-scheduled final exam.
