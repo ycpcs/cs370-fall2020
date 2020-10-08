@@ -51,7 +51,7 @@ One other consideration when rendering the shadow map, is unlike our regular ren
 
 - Add code to **create\_shadows()** to set the *shadow\_camera\_matrix* using **lookat** using the position of *Lights[0]* as the eye vector, the sum of *Lights[0]* position and direction (which defines a point in front of the light location along the light direction) as the center vector, and the usual (0,1,0) as the up vector. **Note:** **DO NOT** change the *eye* and *center* variables for the camera.
 
-- Add code to **create\_shadows()** to call **render\_scene** passing *true* as the argument (to have **render\_scene()** use the shadow shaders)
+- Add code to **create\_shadows()** to set the *shadow* flag to **true** (to have **render\_scene()** use the shadow shaders), call **render\_scene()**, then set the *shadow* flag back to **false**
 
 - Add code to **main()** in the rendering loop to call **create\_shadows()** *before* **display()**. Cull front faces by calling **glCullFace(GL\_FRONT)** before creating the shadows and then reset it using **glCullFace(GL\_BACK)** before rendering the normal scene.
 
@@ -59,15 +59,15 @@ One other consideration when rendering the shadow map, is unlike our regular ren
 
 ## Rendering the Scene with Shadows
 
-Once the shadow map is created, we reset the projection and camera matrices for the viewer (in **display()**). To simplify the code for **render\_scene()** we can make a set of shader references that are assigned to the particular shader variable references for either the standard shader or the shadow shader. This simplifies the code for passing the projection, camera, and model matrices. We then add logic for the specific differences in rendering between the two shaders, e.g. the light and material buffers for the lighting shader. Lastly, before we render the objects with the standard shader, we will *bind* the shadow map, and pass the projection and camera matrices *for the light* which will be used in the shader to perform the shadow depth test.
+Once the shadow map is created, we reset the projection and camera matrices for the viewer (in **display()**). We then add logic to select the appropriate rendering shader and set corresponding shader variables, e.g. the light and material buffers for the lighting shader. To simplify the code for **render\_scene()** we can make a set of shader references that are assigned to the particular shader variable references for either the standard shader or the shadow shader. This simplifies the code for passing the model matrix and vertex position location.  Lastly, before we render the objects with the standard shader, we will pass the projection and camera matrices *for the light* and *bind* the shadow map which will be used in the shader to perform the shadow depth test.
 
 ### Tasks
+
+- Add code to **render\_scene()** to pass the *shadow\_proj\_matrix* and *shadow\_camera\_matrix* to the shader through the *light\_shad\_proj\_mat\_loc* and *light\_shad\_cam\_mat\_loc* using **glUniformMatrix4fv()**
 
 - Add code to **render\_scene()** to make **GL_TEXTURE0** active (using **glActiveTexture()**) which will be the texture unit for the shadow map
 
 - Add code to **render\_scene()** to *bind* the *ShadowTex* (which is a **GL\_TEXTURE\_2D**)
-
-- Add code to **render\_scene()** to pass the *shadow\_proj\_matrix* and *shadow\_camera\_matrix* to the shader through the *light\_shad\_proj\_mat\_loc* and *light\_shad\_cam\_mat\_loc* using **glUniformMatrix4fv()**
 
 ## Shadow Testing in the Shader
 
