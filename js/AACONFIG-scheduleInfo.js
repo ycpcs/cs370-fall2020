@@ -98,14 +98,19 @@ courseInfo.classPeriods = [
 		file: "CS370_Lab15"
 	},
 	{
-		topic: new Topic("Lab 16: MultiTexturing", "lab16.html"),
-		reading: "Ch. 6",
+		topic: new Topic("Lab 16: Environment Mapping", "lab16.html"),
+		reading: "",
 		file: "CS370_Lab16"
 	},
 	{
-		topic: new Topic("Lab 17: Bump Mapping", "lab17.html"),
-		reading: "Ch. 8",
+		topic: new Topic("Lab 17: MultiTexturing", "lab17.html"),
+		reading: "Ch. 6",
 		file: "CS370_Lab17"
+	},
+	{
+		topic: new Topic("Lab 18: Bump Mapping", "lab18.html"),
+		reading: "Ch. 8",
+		file: "CS370_Lab18"
 	},
 	{
 		topic: new Topic("Exam Review", ""),
@@ -114,11 +119,6 @@ courseInfo.classPeriods = [
 	},
 	{
 		topic: new Topic("** Exam 3", "")
-	},
-	{
-		topic: new Topic("Final Project Workday", ""),
-		reading: "",
-		file: ""
 	},
 	{
 		topic: new Topic("Final Project Workday", ""),
