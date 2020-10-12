@@ -76,7 +76,7 @@ courseInfo.classPeriods = [
 	},
 	{
 		topic: new Topic("Exam Review", ""),
-		reading: "<a href=ex1review.pdf \> Exam 1 Review Problems <\a>",
+		reading: "",
 		file: ""
 	},
 	{
@@ -97,7 +97,39 @@ courseInfo.classPeriods = [
 		reading: "Ch. 7 <br /> <a href=https://learnopengl.com/Advanced-Lighting/Shadows/Shadow-Mapping \> LearnOpenGL Shadow Mapping Tutorial <\a>",
 		file: "CS370_Lab15"
 	},
-
+	{
+		topic: new Topic("Lab 16: MultiTexturing", "lab16.html"),
+		reading: "Ch. 6",
+		file: "CS370_Lab16"
+	},
+	{
+		topic: new Topic("Lab 17: Bump Mapping", "lab17.html"),
+		reading: "Ch. 8",
+		file: "CS370_Lab17"
+	},
+	{
+		topic: new Topic("Exam Review", ""),
+		reading: "",
+		file: ""
+	},
+	{
+		topic: new Topic("** Exam 3", "")
+	},
+	{
+		topic: new Topic("Final Project Workday", ""),
+		reading: "",
+		file: ""
+	},
+	{
+		topic: new Topic("Final Project Workday", ""),
+		reading: "",
+		file: ""
+	},
+	{
+		topic: new Topic("Final Project Workday", ""),
+		reading: "",
+		file: ""
+	},
 ];
 
 // The following is for the college-scheduled final exam.

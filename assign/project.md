@@ -7,7 +7,7 @@ title: "Final Project: Think Inside the Box!"
 
 **Milestone 1: Tues, Oct 13th by 12:30/2:00 PM**  10% - This milestone should demonstrate the basic geometry of the scene (placeholder objects can be used where more complex objects will eventually be located). An orthographic "birds-eye" view is acceptable at this point to see the entire room.
 
-**Milestone 2: Tues, Nov 10th by 12:30/2:00 PM**  10% - This milestone should contain most of the geometry that will appear in the final scene. First person camera controls should allow movement throughout the room (but not necessarily with collision detection). Lighting effects should be present.
+**Milestone 2: Tues, Nov 17th by 12:30/2:00 PM**  10% - This milestone should contain most of the geometry that will appear in the final scene. First person camera controls should allow movement throughout the room (but not necessarily with collision detection). Lighting effects should be present.
 
 **Final Presentation:** 80% - Your final project will be demonstrated during the final exam period for your section (see the [schedule](../labs/schedule.html)). MAKE SURE to complete the [self-evaluation form](CS370_Final_Project_eval.docx) and submit it with your project. Use the **MAKE\_ZIP** build option, rename the zip file with your YCP user name, and upload it to the shared Google Drive for this course. Late assignments will **NOT** be accepted.
 
