@@ -129,4 +129,4 @@ To quit the program simply close the window.
 
 Congratulations, you have now written an application incorporating shadows.
 
-Next we will investigate how to apply multiple textures to an object.
+Next we will investigate how to add mirrors into the scene.
