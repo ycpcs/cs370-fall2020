@@ -50,7 +50,6 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
 ### Programming assignment
 
-
 Write a program that draws a 3D stage scene with three "actors" and several lights using OpenGL. A sample executable is included in the **demo** directory as either **LimeLightSolWin.exe***, **LimeLightSolMac**, or **LimeLightSolLinux**. The scene should include:
 
 -   A stage which is a rectangular cube with an elliptical front.
@@ -68,7 +67,7 @@ Write a program that draws a 3D stage scene with three "actors" and several ligh
 -   All animations should be system *independent*, i.e. time-based.
 -   \<esc\> should quit the program.
 
-*Hints:*
+### Hints
 
 > There are additional models provided that can be used for the different actors, e.g. **octahedron.obj**, etc.
 >
