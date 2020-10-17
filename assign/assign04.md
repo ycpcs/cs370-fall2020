@@ -22,7 +22,9 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 ## Written Questions
 
 1.  Using the example robot from [lab 14](../labs/lab14.html) suppose we know the *position* where one of the upper arms is starting and have a specific final *location* we want the arm to have. Give a method to create the path the robot should follow to get from the starting point to the end point.
+
 2.  Using the example scene graph diagram from [lab 14](../labs/lab14.html), sketch the scene graph for the programming portion of the assignment. **Note:** You only need to show the relationships between the nodes, i.e. it is not necessary to include transformations.
+
 3.  Given the following texture map
 
     > <img src="images/assign04/texture.png" alt="Texture Map" height="300"/>
@@ -36,7 +38,7 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
 4.   Using the texture plane from question 3, sketch the textured figure given below using the provided texture coordinates
 
-    > <img src="images/assign04/textureObj.png" alt="Texture Object" height="300"/>
+<img src="images/assign04/textureObj.png" alt="Texture Object" height="300"/>
 
 ### Hints
 
