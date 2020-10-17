@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Assignment 4: Stick Man Walking"
+title: "Assignment 4: Walking Man"
 ---
 
 **Written Questions Due: Thurs, Nov 12th by 12:30/2:00 PM** (in class)
@@ -27,37 +27,34 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
     > <img src="images/assign04/texture.png" alt="Texture Map" height="300"/>
 
-with wrapping modes
+> with wrapping modes
 
-    > glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-    > glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-sketch the surrounding parts of the texture plane.
+> sketch the surrounding parts of the texture plane.
 4.   Using the texture plane from question 3, sketch the textured figure given below using the provided texture coordinates
 
     > <img src="images/assign04/textureObj.png" alt="Texture Object" height="300"/>
-
 
 ### Hints
 
 > 1.  This problem is known as *reverse kinematics* and is a key area of robotics research. Representing the individual transformations symbolically as **T**(*dx*, *dy*, *dz*), **R**(*ang*), and **S**(*sx*, *sy*, *sz*), first determine the *net* transformation matrix for the upper arm in terms of the base angle θ, lower arm angle φ, and upper arm angle ψ along with any translations for each part. Then let the initial base and joint angles be θ<sub>i</sub>, φ<sub>i</sub>, ψ<sub>i</sub> and final base and joint angles be θ<sub>f</sub>, φ<sub>f</sub>, ψ<sub>f</sub>. These angles would be found by *solving* the transformation matrix equations for the angles (which you may assume can be done to compute all these angles). Using these sets of angles describing the location of the two points, suggest an interpolation scheme to *smoothly* transition from one to the other.
 > 2.  Consider which nodes are relative to other nodes (*children*) and which ones are independent (*siblings*). 
 > 3.  Note that the texture plane actually extends infinitely in both directions.
-> 4.  Mark the texture coordinates on the texture plane, the "cut" this section out and "stretch" it to fit on the object. 
-
-
+> 4.  Mark the texture coordinates on the texture plane, then "cut" this section out and "stretch" it to fit on the object. 
 
 ### Programming assignment
 
-Write a program that draws a 3D scene of a walking player with articulated arms and legs along with a bouncing basketball into a translucent box sitting on a court. A sample executable is included in the skeleton zip file as **WalkingManSolWin.exe**, **WalkingManSolMac**, or **WalkingManSolLinux** (the Mac and Linux versions should be run from the command line). Keyboard controls are provided that allow the camera to be rotated using WASD. The scene should include:
+Write a program that draws a 3D scene of a walking player with articulated arms and legs along with a bouncing basketball into a translucent box sitting on a court. A sample executable is included in the skeleton zip file as **WalkingManSolWin.exe**, **WalkingManSolMac**, or **WalkingManSolLinux** (the Mac and Linux versions should be run from the command line). Keyboard controls are provided that allow an orthographic camera to be rotated using WASD. The scene should include:
 
--   There should be a background image of your choosing (or you may use the included **ycp.png** file).
+-   A background image of your choosing (or you may use the included **ycp.png** file). **Note:** You will need to add texture coordinates for each vertex of the background quad using **.push_back()** for the *uvCoords* vector in **build\_geometry()**.
 -   A *scene graph* to render the player, basketball, court, and box. Create materials to enhance the scene appearance.
 -   The player should consist of
 
     > -   Rectangular torso with a shirt
     > -   Elliptical head with a face
-    > -   Rectangular arms and legs with two segments
+    > -   Rectangular arms and legs with two segments that have lighting with different materials
 
 -   Scale factors for all the player parts are included in **player.h**.
 -   All the parts of the player other than the torso and head should use materials and lighting.
@@ -74,17 +71,17 @@ Write a program that draws a 3D scene of a walking player with articulated arms 
 
 ### Hints
 
-> When creating the node, the base transform should simply scale and locate the object in a convenient place. Then the update transform should position it relative to its parent and apply any dynamic transformations.
+> - When creating the node, the base transform should simply scale and locate the object in a convenient place. Then the update transform should position it relative to its parent and apply any dynamic transformations.
 >
-> Place the court on the *x-z* plane and position the player is walking *on* the *x-z* plane with the *y*-axis being the vertical dimension.
+> - Place the court on the *x-z* plane and position the player to walk *on* the *x-z* plane with the *y*-axis being the vertical dimension.
 >
-> Consider the necessary rendering order for the objects in the scene graph in order for transparency to work properly.
+> - Consider the necessary rendering order for the objects in the scene graph in order for transparency to work properly.
 >
-> The included models create position, normal, and texture coordinate buffers, thus they can be used for any type of node. Consider which elements of the scene should use **MatNode**s and which should use **TexNode**s.
+> - Loading the included models will create position, normal, and texture coordinate buffers, thus they can be used for any type of node. Consider which elements of the scene should use **MatNode**s and which should use **TexNode**s.
 >
-> Be sure to enable alpha blending and set appropriate blend factors for alpha blending effects. You will need to create "translucent" materials with non-unity alpha values and render translucent objects in the proper order within the scene graph.
+> - Be sure to enable alpha blending and set appropriate blend factors for alpha blending effects. You will need to create "translucent" materials with non-unity alpha values and render translucent objects in the proper order within the scene graph.
 >
-> You can use the provided lighting and texture shaders as well as the light sources.
+> - You can use the provided lighting and texture shaders as well as the light sources.
 
 ## Grading Criteria
 
