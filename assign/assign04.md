@@ -29,8 +29,8 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
 
     > with wrapping modes
 
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    > glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+    > glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
     > sketch the surrounding parts of the texture plane.
 
@@ -61,7 +61,7 @@ Write a program that draws a 3D scene of a walking player with articulated arms 
 -   All the parts of the player other than the torso and head should use materials and lighting.
 -   The torso of the player should use the *TexCube* object (**not** the *Cube* object) which will be texture mapped using the **shirt\_z.png** texture. You will need to add texture coordinates for each face in the *uvCoords* vector in **build\_geometry()**. Note that the texture map contains labelled pieces for the front, back, left, and right faces of the cube (you may use any parts of the texture map for the top/bottom faces). The pixel locations for the divisions between the segments is shown below:
 
-    > <img src="images/assign04/shirt_tex_layout.png" alt="Shirt Texture Layout" height="300"/>
+    > <img src="images/assign04/shirt_tex_layout.png" alt="Shirt Texture Layout" height="400"/>
 
 -   The box should be translucent such that the basketball can be seen inside it and the court/player can be seen through it.
 -   The player should "walk" by moving arms in opposition to the legs. The steps should be time-based, i.e. should occur at a rate of *sps* (steps-per-second).
