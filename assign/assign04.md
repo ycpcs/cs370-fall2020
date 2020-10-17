@@ -31,14 +31,14 @@ Open CLion, select **Open or Import** from the main screen (you may need to clos
     >
     > with wrapping modes
     >
-    >    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
-    >    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
+    >     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+    >     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     >
     > sketch the surrounding parts of the texture plane.
 
 4.   Using the texture plane from question 3, sketch the textured figure given below using the provided texture coordinates
 
-<img src="images/assign04/textureObj.png" alt="Texture Object" height="300"/>
+> <img src="images/assign04/textureObj.png" alt="Texture Object" height="300"/>
 
 ### Hints
 
