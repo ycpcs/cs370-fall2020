@@ -76,7 +76,7 @@ Write a program that draws a 3D scene of a walking player with articulated arms 
 
 > - When creating the node, the base transform should simply scale and locate the object in a convenient place. Then the update transform should position it relative to its parent and apply any dynamic transformations.
 >
-> - Place the court on the *x-z* plane and position the player to walk *on* the *x-z* plane with the *y*-axis being the vertical dimension.
+> - Start with the torso on the *x-z* plane and position the other nodes accordingly.
 >
 > - Consider the necessary rendering order for the objects in the scene graph in order for transparency to work properly.
 >
