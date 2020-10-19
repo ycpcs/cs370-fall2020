@@ -75,7 +75,7 @@ where *target* is a symbolic constant denoting the *type* of texture we are bind
 
 For this lab we will simply be using the same texture coordinates for both texture maps. However, if the model/loader supported multiple texture coordinates, we could store them in separate texture coordinate buffers and pass them through the vertex shader to the fragment shader.
 
-### Combining Texture Colors
+## Combining Texture Colors
 
 The last step to applying multiple textures is sampling both textures in the fragment shader and deciding how to *combine* the two colors together for the final fragment color. 
 
