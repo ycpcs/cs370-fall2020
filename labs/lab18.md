@@ -25,7 +25,7 @@ Thus we will compute a transformation of basis to map world coordinates to tange
 
 To perform this transformation, we need the three new basis vectors, *N*, *T*, and *B*. Fortunately, we already have the normal (from the model). Since we are using *triangles* for our primatives, the *tangent* vector is simply defined as a vector between two of the vertices (which must lie *in* the plane of the primative). Then we can simply compute the vector *cross product* to give the *bitangent* as:
 
-> <img src="images/lab18/Bitangent.png" alt="Bitangent" height="100"/>
+> <img src="images/lab18/Bitangent.png" alt="Bitangent" height="50"/>
 
 The transformation matrix for the lighting vectors (assuming **N**, **T**, and **B** are unit vectors) is then given by
 
@@ -63,7 +63,7 @@ where the *vertices*, *uvs*, and *normal* vectors will be the data loaded from t
 
 Once we have the view and light vectors transformed to tangent space (which now has a normal given by (0,0,1)) for each fragment of the surface, we can obtain a perturbed tangent space normal *per pixel* and *compute* a modified lighting effect to produce self-shadowing. To accomplish this effect, we will store the perturbed surface normals into a *normal map* which is essentially an "image" of the surface where the geometric variations are stored as *colors* (again utilizing the correspondence in the pipeline between 3D coordinates and RGB colors). This map is loaded into a texture and applied in addition to the surface texture using multi-texturing in the fragment shader. Since we are only slightly perturbing the *direction* of the normal, i.e. we primarily maintain the *z*-axis which is the *blue* channel, normal maps appear as a mainly blue image. Because we are unable to store negative values in color channels, we instead scale the values such that those between [0,0.5] represent negative values and those between [0.5,1] represent positive values. We can then obtain the original component values via the simple formula
 
-> <img src="images/lab18/ScaleFormula.png" alt="Scaling Formula" height="30"/>
+> <img src="images/lab18/ScaleFormula.png" alt="Scaling Formula" height="20"/>
 
 We then compute the Phong model diffuse and specular terms with this perturbed normal and the transformed lighting vectors.
 
