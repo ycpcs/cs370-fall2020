@@ -25,7 +25,7 @@ Thus we will compute a transformation of basis to map world coordinates to tange
 
 To perform this transformation, we need the three new basis vectors, *N*, *T*, and *B*. Fortunately, we already have the normal (from the model). Since we are using *triangles* for our primatives, the *tangent* vector is simply defined as a vector between two of the vertices (which must lie *in* the plane of the primative). Then we can simply compute the vector *cross product* to give the *bitangent* as:
 
-> <img src="images/lab18/Bitangent.png" alt="Bitangent" height="50"/>
+> <img src="images/lab18/Bitangent.png" alt="Bitangent" height="20"/>
 
 The transformation matrix for the lighting vectors (assuming **N**, **T**, and **B** are unit vectors) is then given by
 
