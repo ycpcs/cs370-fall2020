@@ -75,13 +75,19 @@ where *target* is again the type of texture we are using (typically **GL\_TEXTUR
 
 ### Texture Scaling and Mipmaps
 
-Since textures are applied in the fragment processor, they are placed on the *rendered* surfaces of objects. Many times the rendered resolution will not match the resolution of the texture map, so OpenGL needs to know how to account for this difference. Two cases can occur - either the rendered surface is higher resolution (requiring the texture to be *magnified*) or lower resolution (requiring the texture to be *minified*) - and corresponding modes must be set for both cases. In the case of maginification, the system must upscale the image using either the *nearest* corresponding texel or *linear* extrapolation from surrounding texels. Often times if scaling is severe, the texture will appear pixelated in which case an additional higher resolution texture should be created by the programmer and loaded into the application. Small magnifications, however, can be handled by setting
+Since textures are applied in the fragment processor, they are placed on the *rendered* surfaces of objects. Many times the rendered resolution will not match the resolution of the texture map, so OpenGL needs to know how to account for this difference. Two cases can occur - either the rendered surface is higher resolution (requiring the texture to be *magnified*) or lower resolution (requiring the texture to be *minified*) - and corresponding modes must be set for both cases. 
+
+#### Magnification
+
+In the case of maginification, the system must upscale the image using either the *nearest* corresponding texel or *linear* extrapolation from surrounding texels. Often times if scaling is severe, the texture will appear pixelated in which case an additional higher resolution texture should be created by the programmer and loaded into the application. Small magnifications, however, can be handled by setting
 
 ```cpp
 void glTexParameteri(GLenum target, GLenum pname, Type param);
 ```
 
 where *target* is again the type of texture we are using (typically **GL\_TEXTURE\_2D**), *pname* is the parameter we wish to set (e.g. **GL\_TEXTURE\_MAG\_FILTER** for magnification), and *param* is the value we wish to set the parameter to (e.g. **GL\_NEAREST** or **GL\_LINEAR**).
+
+#### Minification
 
 Minification, when the texture is larger than the rendered surface, typically occurs more frequently, e.g. high-res textures for small (in pixels) objects. One possibility is to simply use a reduction filter similar to magnification (**GL\_TEXTURE\_MIN\_FILTER** with **GL\_NEAREST** or **GL\_LINEAR**) to produce reduced resolution images, however repeatedly performing this resizing for numerous objects is inefficient. OpenGL provides an alternative mechanism known as *mipmapping* which precomputes reduced resolution textures (also storing them on the graphics card) and then applies the one that most closely matches the rendered object's resolution. We can have the system generate mipmap levels automatically using
 
@@ -90,6 +96,8 @@ void glGenerateMipmap(GLenum target);
 ```
 
 where *target* is again the type of texture we are using (typically **GL\_TEXTURE\2D**).
+
+#### Mipmaps
 
 Mipmaps work best when the original image dimensions are powers of 2 (but they are not required to be). The mipmaps create reduced resolution textures by repeatedly dividing each dimension in half either a prespecified number of times or until one of the dimensions becomes 1.
 
