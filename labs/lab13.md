@@ -81,7 +81,7 @@ Since textures are applied in the fragment processor, they are placed on the *re
 void glTexParameteri(GLenum target, GLenum pname, Type param);
 ```
 
-where *target* is again the type of texture we are using (typically **GL\_TEXTURE\2D**), *pname* is the parameter we wish to set (e.g. **GL\_TEXTURE\_MAG\_FILTER** for magnification), and *param* is the value we wish to set the parameter to (e.g. **GL\_NEAREST** or **GL\_LINEAR**).
+where *target* is again the type of texture we are using (typically **GL\_TEXTURE\_2D**), *pname* is the parameter we wish to set (e.g. **GL\_TEXTURE\_MAG\_FILTER** for magnification), and *param* is the value we wish to set the parameter to (e.g. **GL\_NEAREST** or **GL\_LINEAR**).
 
 Minification, when the texture is larger than the rendered surface, typically occurs more frequently, e.g. high-res textures for small (in pixels) objects. One possibility is to simply use a reduction filter similar to magnification (**GL\_TEXTURE\_MIN\_FILTER** with **GL\_NEAREST** or **GL\_LINEAR**) to produce reduced resolution images, however repeatedly performing this resizing for numerous objects is inefficient. OpenGL provides an alternative mechanism known as *mipmapping* which precomputes reduced resolution textures (also storing them on the graphics card) and then applies the one that most closely matches the rendered object's resolution. We can have the system generate mipmap levels automatically using
 
