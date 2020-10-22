@@ -95,7 +95,7 @@ Minification, when the texture is larger than the rendered surface, typically oc
 void glGenerateMipmap(GLenum target);
 ```
 
-where *target* is again the type of texture we are using (typically **GL\_TEXTURE\2D**).
+where *target* is again the type of texture we are using (typically **GL\_TEXTURE\_2D**).
 
 #### Mipmaps
 
