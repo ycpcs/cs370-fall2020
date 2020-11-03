@@ -7,7 +7,7 @@ title: "Assignment 4: Walking Man"
 
 **Program Due:**
 
-**Milestone 1: Tuesday, Nov 3rd by 11:59 PM** 
+**Updated Milestone 1: Wednesday, Nov 4th by 11:59 PM** 
 
 **Milestone 2: Monday, Nov 16th by 11:59 PM** Late assignments will be penalized 20 points per day.
 

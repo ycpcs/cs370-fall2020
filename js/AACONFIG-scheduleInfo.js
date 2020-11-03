@@ -98,6 +98,9 @@ courseInfo.classPeriods = [
 		file: "CS370_Lab15"
 	},
 	{
+		topic: new Topic("SPARTAN DAY!", "")
+	},
+	{
 		topic: new Topic("Lab 16: Environment Mapping", "lab16.html"),
 		reading: "",
 		file: "CS370_Lab16"
@@ -108,14 +111,9 @@ courseInfo.classPeriods = [
 		file: "CS370_Lab17"
 	},
 	{
-		topic: new Topic("Lab 18: Bump Mapping", "lab18.html"),
+		topic: new DoubleTopic("Lab 18: Bump Mapping", "lab18.html", "Exam Review", ""),
 		reading: "Ch. 8",
 		file: "CS370_Lab18"
-	},
-	{
-		topic: new Topic("Exam Review", ""),
-		reading: "",
-		file: ""
 	},
 	{
 		topic: new Topic("** Exam 3", "")
