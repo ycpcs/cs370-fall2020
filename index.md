@@ -35,8 +35,8 @@ Welcome to the website for CS 370, Computer Graphics Programming I, at York Coll
 * **Nov 12** - [Assignment 4 Written](assign/assign04.html) Due.
 * **Nov 16** - [Assignment 4 Milestone 2 Program](assign/assign04.html) Due.
 * **Nov 17 - EXAM III**
-* **Dec 3 12:45-2:45 -** [FINAL PROJECT](assign/project.html) **DEMOS DUE - 102 (2pm section).**
- * **Dec 5 10:15-12:15 -** [FINAL PROJECT](assign/project.html) **DEMOS DUE - 101 (12:30pm section).**
+* **Dec 3 - 102 (2pm section) - 12:45-2:45 -** [FINAL PROJECT](assign/project.html) **DEMOS DUE.**
+* **Dec 5 - 101 (12:30pm section) - 10:15-12:15 -** [FINAL PROJECT](assign/project.html) **DEMOS DUE .**
 
 <!--
 * **Sept 12** - [Assignment 1](assign/assign01.html)  (Don Quixote) Due.
